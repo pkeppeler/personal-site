@@ -39,13 +39,27 @@ distinctiveness comes from hand-written CSS and hand-written `.astro`
 templates. There is exactly one CSS file (`src/styles/global.css`) and it
 stays that way unless there's a compelling reason to split it.
 
-### No design flourishes the user didn't ask for
+### No design flourishes without sign-off
 
-Do not add a dark-mode toggle. Do not add a hamburger menu. Do not add
-animations, page transitions, scroll effects, progress bars, reading-time
-estimates, related-posts widgets, "share on Twitter" buttons, comments, view
-counts, or social-embed cards. The user explicitly said no to this class of
-thing. If you think something is a good idea anyway, ask first.
+The user is in charge of the site's look and feel. Do not add design
+flourishes unilaterally — not because flourishes are forbidden, but because
+the user wants to be in the loop on aesthetic decisions. If you think a
+visual element would improve the site, propose it and wait for an explicit
+yes before implementing it. This includes (non-exhaustively) animations,
+page transitions, scroll effects, progress bars, reading-time estimates,
+related-posts widgets, share buttons, comments, view counts, social-embed
+cards, custom cursors, and parallax anything.
+
+Things the user has literally said no to — do not propose these again
+without a compelling new reason:
+
+- Dark-mode toggles
+- Hamburger menus
+- Tailwind or any CSS framework
+- Client-side JavaScript on default pages
+- Analytics, cookies, or tracking
+- Web fonts / external font loading
+- Templates that look like every other developer blog
 
 ### No analytics, cookies, or tracking
 
@@ -108,15 +122,36 @@ Keep posts portable across markdown-based static site generators:
   merging.
 - Major version bumps get their own PR and careful review.
 
-### Dependency minimalism
+### Deliberate dependencies
 
-- Prefer zero-dependency solutions. Every dependency is attack surface and
-  future maintenance burden.
-- Prefer official `@astrojs/*` integrations over third-party Astro plugins.
-- Before adding any new dependency, ask: can this be solved in 20 lines of
-  hand-written code? If yes, write the 20 lines.
-- Do not install anything "for later." YAGNI. Add dependencies the day you
-  need them.
+Every dependency should earn its keep. The goal is _deliberate_ dependencies,
+not _minimal_ dependencies — don't reinvent a mature library for a non-trivial
+problem, but don't add a package for a five-line problem either. Before
+adding a dependency, walk through these questions:
+
+1. **Is it a well-defined, non-trivial problem** that a mature library
+   solves better than you could (markdown parsing, RSS/XML generation,
+   date/time parsing, cryptography, URL handling, image processing)? If
+   yes, take the library.
+2. **Is it a tiny one-off** you could write in ~20 lines (string formatting,
+   one-shot array helpers, a single date format)? If yes, write the 20
+   lines. Don't pull in `left-pad`.
+3. **Is it first-party to something you already depend on** (e.g.
+   `@astrojs/*` when Astro is already installed)? The marginal cost is
+   small; trust is largely inherited from the parent. Prefer these over
+   third-party alternatives that do the same thing.
+4. **Is it a random community package** with a handful of stars, one
+   maintainer, and no recent commits? High supply-chain risk regardless of
+   size. Avoid, or vendor the relevant code directly into the repo.
+5. **How much transitive fanout** does it bring? A package with 3 deps is
+   very different from one with 300. Check `pnpm why <pkg>` or skim the
+   lockfile diff before merging.
+6. **Is there a zero-dep alternative** in the Node standard library or
+   modern JS (`Intl.DateTimeFormat`, `crypto`, `url`, `path`, `fetch`,
+   `Date`, `URL`)? If yes, prefer it.
+
+Do not install anything "for later." Add dependencies the day you actually
+use them, not the day you think you might.
 
 ### Node version
 
@@ -145,12 +180,6 @@ Keep posts portable across markdown-based static site generators:
 - `pnpm preview` — preview built output
 - Cloudflare Pages builds on push to `main`. Build command:
   `pnpm install --frozen-lockfile && pnpm build`. Output: `dist/`.
-
-## Branch
-
-Development happens on `claude/minimal-tech-blog-fmbwZ` until the initial
-scaffold is merged to `main`. After that, use short-lived feature branches
-off `main`.
 
 ## When in doubt
 
