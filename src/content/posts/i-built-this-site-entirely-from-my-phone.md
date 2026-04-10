@@ -124,6 +124,7 @@ Some things worked better than expected:
 Some things need to improve:
 - **Mobile browser OAuth flows are genuinely broken** for some services. This isn't a Claude problem — it's a Cloudflare (and likely other providers') problem. If you're building developer tools, test your OAuth flows on mobile.
 - **The Claude mobile app needs to preserve draft input and scroll position.** These are small things that matter enormously when you're working in micro-sessions across a day. Losing a five-minute draft because you accidentally swiped back is the kind of friction that makes people give up.
+- **I need a better workflow for images in posts.** Right now, adding an image to a blog post means saving it from my phone, then uploading it to the repo through the GitHub mobile browser. It works, but it's clunky compared to the rest of the workflow where everything flows through Claude Code and Git. There's probably a better way to do this that I haven't figured out yet.
 
 Philosophically, I'm still not sure whether filling idle moments with project work is actually better than just having empty thinking space. Both are better than a scrolling addiction. But there's something satisfying about looking at a finished, deployed project and knowing it was built in the margins. In the moments that used to disappear into an infinite feed.
 
