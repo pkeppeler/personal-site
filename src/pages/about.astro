@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="about — Peter Keppeler"
+  description="About Peter Keppeler and this project journal."
+>
+  <h1>About</h1>
+
+  <p>
+    A project journal. I use it to document personal projects I build in my
+    spare time and share what I've learned along the way. The audience is
+    mostly future me, a handful of friends, and whoever else happens to read it.
+  </p>
+
+  <h2>How it's built</h2>
+
+  <p>
+    This site was built with Claude Code as a development partner. It's an
+    Astro static site with zero client-side JavaScript, one hand-written CSS
+    file, and no cookies. The code lives on GitHub:
+    <a href="https://github.com/pkeppeler/personal-site">pkeppeler/personal-site</a>.
+  </p>
+
+  <p>Stack:</p>
+
+  <ul>
+    <li><a href="https://astro.build">Astro</a> (static site generator)</li>
+    <li><a href="https://pnpm.io">pnpm</a> (package manager with strict security defaults)</li>
+    <li><a href="https://shiki.style">Shiki</a> (build-time syntax highlighting)</li>
+    <li><a href="https://pages.cloudflare.com">Cloudflare Pages</a> (hosting)</li>
+  </ul>
+
+  <p>
+    Cloudflare's server-side Web Analytics is enabled. It counts aggregate
+    page views from the CDN request logs Cloudflare already keeps to serve
+    the site. No cookies. No client-side JavaScript. No personal data
+    collection.
+  </p>
+
+  <h2>AI workflow</h2>
+
+  <p>
+    I use Claude Code as a development partner for the projects I write
+    about here, and I use Claude to help draft the posts as well.
+    Specifically:
+  </p>
+
+  <ul>
+    <li>
+      The code, configuration, and design of this site were written
+      collaboratively with Claude. I reviewed every file before merging.
+    </li>
+    <li>
+      Most blog posts start as a draft from Claude based on my notes and
+      lived experience of the project. I then edit them for voice and
+      accuracy, and add personal details Claude couldn't know.
+    </li>
+    <li>
+      Future posts may vary in how collaborative they are. If a post is
+      meaningfully AI-drafted, assume that's the default unless I say
+      otherwise.
+    </li>
+  </ul>
+
+  <p>
+    AI leverage is the reason this blog exists. The projects I write about
+    are projects I built with Claude, and the posts themselves follow the
+    same workflow. Without it, both would be things I plan to do eventually
+    instead of things that actually exist.
+  </p>
+
+  <h2>Contact</h2>
+
+  <ul>
+    <li><a href="https://github.com/pkeppeler">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/keppeler">LinkedIn</a></li>
+  </ul>
+</BaseLayout>

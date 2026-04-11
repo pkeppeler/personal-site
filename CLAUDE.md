@@ -61,12 +61,17 @@ without a compelling new reason:
 - Web fonts / external font loading
 - Templates that look like every other developer blog
 
-### No analytics, cookies, or tracking
+### No cookies or client-side tracking
 
-The site does not include any analytics. It does not set any cookies. It does
-not load any third-party scripts, fonts, or resources. If the user eventually
-wants analytics, it will be something privacy-respecting like Plausible,
-added deliberately — don't pre-empt that.
+The site does not set cookies. It does not load any third-party scripts,
+fonts, or resources. It does not ship any JavaScript to visitors for
+tracking or analytics.
+
+Cloudflare server-side Web Analytics is enabled. It counts aggregate page
+views from the CDN request logs Cloudflare already keeps to serve the
+site. No cookies. No client-side JavaScript. No personal data collection.
+If you change this setup, keep those three properties intact: no cookies,
+no client JS, no personal data. Do not add any other analytics tool.
 
 ### Content portability
 
