@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Markdown Viewer — Peter Keppeler"
+  description="Paste or upload a markdown file to view it rendered."
+>
+  <article id="viewer-page">
+    <h1>Markdown Viewer</h1>
+    <p class="viewer-hint">
+      Paste markdown or drop a <code>.md</code> file to view it rendered.
+      Nothing leaves your browser.
+    </p>
+
+    <div id="input-area">
+      <label id="drop-zone" for="file-upload">
+        Drop a .md file here or click to upload
+        <input
+          type="file"
+          id="file-upload"
+          accept=".md,.markdown,.txt,.text,text/markdown,text/plain"
+        />
+      </label>
+      <textarea
+        id="md-input"
+        placeholder="Or paste markdown here..."
+        rows="12"
+      ></textarea>
+    </div>
+
+    <hr id="viewer-divider" hidden />
+
+    <div id="md-output" hidden></div>
+    <button id="clear-btn" type="button" hidden>Clear</button>
+  </article>
+
+  <style>
+    .viewer-hint {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    #input-area {
+      margin: 1.5rem 0;
+    }
+
+    #drop-zone {
+      display: block;
+      border: 2px dashed var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+      margin-bottom: 1rem;
+    }
+
+    #drop-zone:hover,
+    #drop-zone.drag-over {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    #file-upload {
+      display: none;
+    }
+
+    #md-input {
+      display: block;
+      width: 100%;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--code-bg);
+      color: var(--text);
+      resize: vertical;
+    }
+
+    #md-input:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: -1px;
+    }
+
+    #viewer-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    #md-output {
+      line-height: 1.6;
+    }
+
+    #md-output table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    #md-output th,
+    #md-output td {
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    #md-output th {
+      font-weight: 600;
+      background: var(--code-bg);
+    }
+
+    #clear-btn {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+
+    #clear-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  </style>
+
+  <script>
+    import { marked } from 'marked';
+    import DOMPurify from 'dompurify';
+
+    const output = document.getElementById('md-output') as HTMLDivElement;
+    const divider = document.getElementById('viewer-divider') as HTMLHRElement;
+    const input = document.getElementById('md-input') as HTMLTextAreaElement;
+    const fileInput = document.getElementById('file-upload') as HTMLInputElement;
+    const dropZone = document.getElementById('drop-zone') as HTMLLabelElement;
+    const clearBtn = document.getElementById('clear-btn') as HTMLButtonElement;
+
+    function renderMarkdown(md: string) {
+      const hasContent = md.trim() !== '';
+      const rawHtml = marked.parse(md) as string;
+      output.innerHTML = DOMPurify.sanitize(rawHtml);
+      output.hidden = !hasContent;
+      divider.hidden = !hasContent;
+      clearBtn.hidden = !hasContent;
+    }
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    input.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => renderMarkdown(input.value), 150);
+    });
+
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files?.[0];
+      if (file) readFile(file);
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('drag-over');
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('drag-over');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      const file = e.dataTransfer?.files[0];
+      if (file) readFile(file);
+    });
+
+    function readFile(file: File) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const md = reader.result as string;
+        input.value = md;
+        renderMarkdown(md);
+      };
+      reader.readAsText(file);
+    }
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      fileInput.value = '';
+      renderMarkdown('');
+    });
+  </script>
+</BaseLayout>

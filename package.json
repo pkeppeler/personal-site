@@ -11,9 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.5",
     "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2"
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.5",
+    "dompurify": "^3.4.0",
+    "marked": "^18.0.1"
   },
   "engines": {
     "node": ">=22.0.0 <23.0.0"
