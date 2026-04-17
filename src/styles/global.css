@@ -170,3 +170,9 @@ article img {
     min-width: 0;
   }
 }
+
+@media (display-mode: standalone) {
+  header nav {
+    display: none;
+  }
+}
