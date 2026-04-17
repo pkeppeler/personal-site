@@ -4,14 +4,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="about — Peter Keppeler"
-  description="About Peter Keppeler and this project journal."
+  description="About Peter Keppeler and this site: learning in public, documenting personal projects, and publishing small standalone tools."
 >
   <h1>About</h1>
 
   <p>
-    A project journal. I use it to document personal projects I build in my
-    spare time and share what I've learned along the way. The audience is
-    mostly future me, a handful of friends, and whoever else happens to read it.
+    A place to learn in public, document personal projects I build in my
+    spare time, and publish small standalone tools. The audience is mostly
+    future me, a handful of friends, and whoever else happens to read it.
   </p>
 
   <h2>How it's built</h2>
@@ -30,6 +30,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li><a href="https://pnpm.io">pnpm</a> (package manager with strict security defaults)</li>
     <li><a href="https://shiki.style">Shiki</a> (build-time syntax highlighting)</li>
     <li><a href="https://pages.cloudflare.com">Cloudflare Pages</a> (hosting)</li>
+  </ul>
+
+  <p>
+    Tools under <a href="/tools/">/tools/</a> opt into a service worker so they
+    can be installed and used offline. That stack is:
+  </p>
+
+  <ul>
+    <li><a href="https://vite-pwa-org.netlify.app/frameworks/astro.html">@vite-pwa/astro</a> (auto-generated service worker, per-tool manifests)</li>
+    <li><a href="https://marked.js.org">marked</a> (markdown parsing, used by the markdown viewer)</li>
+    <li><a href="https://github.com/cure53/DOMPurify">DOMPurify</a> (HTML sanitization for rendered markdown)</li>
   </ul>
 
   <p>
