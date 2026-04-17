@@ -144,6 +144,14 @@ Before the first deploy, update `site` in `astro.config.mjs` to the real
 production domain (it's used for absolute URLs in the RSS feed, sitemap, and
 Open Graph tags).
 
+## Offline tools (PWA)
+
+Client-side tools under `/tools/` can be installed as standalone
+PWAs on supported devices. A site-wide service worker caches assets
+for offline use. The site itself has no root manifest by design —
+install prompts are scoped to individual tools that opt in. See
+CLAUDE.md for the pattern.
+
 ## Security hygiene
 
 See `CLAUDE.md` for the full list of project constraints. Short version:

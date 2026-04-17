@@ -6,6 +6,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Markdown Viewer — Peter Keppeler"
   description="Paste or upload a markdown file to view it rendered."
 >
+  <link
+    slot="head"
+    rel="manifest"
+    href="/tools/viewer/manifest.webmanifest"
+  />
   <article id="viewer-page">
     <h1>Markdown Viewer</h1>
     <p class="viewer-hint">

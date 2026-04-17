@@ -192,3 +192,32 @@ Prefer less. Fewer dependencies, fewer lines, fewer features, fewer files.
 The user is a backend/infra engineer who values simplicity and correctness
 over cleverness. If a change adds complexity without clearly earning its
 keep, don't make the change.
+
+## Adding an installable (PWA) tool
+
+The site uses a single auto-generated service worker (@vite-pwa/astro)
+plus per-tool manifests. Installability is opt-in per tool. There is
+no root manifest — blog and homepage visitors never see an install
+prompt.
+
+To add a new installable tool:
+
+1. Create the page: `src/pages/tools/<slug>.astro` (flat, single-file;
+   do not create a subdirectory).
+2. Create the manifest: `public/tools/<slug>/manifest.webmanifest` with
+   `start_url` and `scope` both set to `/tools/<slug>/`.
+3. Generate icons: `npm run icons -- <slug>` (uses
+   scripts/generate-tool-icons.mjs to produce 192, 512, and
+   512-maskable PNGs from favicon.svg; pass a custom SVG path as
+   the second arg if needed).
+4. Link the manifest in the tool's page head:
+     <link rel="manifest" href="/tools/<slug>/manifest.webmanifest">
+5. Build and verify in Chrome DevTools > Application that the page
+   is installable and works offline after first load.
+
+To add a non-installable tool, do only step 1. The service worker
+will still cache it for fast repeat loads.
+
+Do not add a root-level manifest. Do not link any manifest from
+shared layouts. Those would make the entire site installable, which
+is not the intent.
