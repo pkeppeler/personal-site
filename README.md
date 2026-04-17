@@ -4,11 +4,13 @@ Peter Keppeler's personal site and technical blog.
 
 ## What this is
 
-A minimal static site: a short bio, links, and a reverse-chronological blog.
-Posts are written in markdown and rendered to static HTML at build time. There
-is no database, no CMS, no server-side code, and no client-side JavaScript on
-the default pages. The HTML that reaches your browser is the HTML that was
-built on push.
+A minimal static site: a short bio, links, a reverse-chronological blog, and
+a small collection of standalone browser tools. Posts are written in markdown
+and rendered to static HTML at build time. There is no database, no CMS, no
+server-side code, and no client-side JavaScript on the default pages. Tools
+under `/tools/` opt in to client-side JS and a service worker so they can be
+installed and used offline. The HTML that reaches your browser is the HTML
+that was built on push.
 
 ## Tech stack
 
