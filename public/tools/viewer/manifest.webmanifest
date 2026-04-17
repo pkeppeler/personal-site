@@ -1,6 +1,6 @@
 {
-  "name": "PJ MD Viewer",
-  "short_name": "MD Viewer",
+  "name": "PJ Markdown Viewer",
+  "short_name": "PJ MD Viewer",
   "start_url": "/tools/viewer/",
   "scope": "/tools/viewer/",
   "display": "standalone",
