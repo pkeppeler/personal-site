@@ -11,6 +11,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     rel="manifest"
     href="/tools/viewer/manifest.webmanifest"
   />
+  <script slot="head" is:inline src="/registerSW.js"></script>
   <article id="viewer-page">
     <h1>Markdown Viewer</h1>
     <p class="viewer-hint">

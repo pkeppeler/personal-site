@@ -196,9 +196,10 @@ keep, don't make the change.
 ## Adding an installable (PWA) tool
 
 The site uses a single auto-generated service worker (@vite-pwa/astro)
-plus per-tool manifests. Installability is opt-in per tool. There is
-no root manifest — blog and homepage visitors never see an install
-prompt.
+plus per-tool manifests. Installability is opt-in per tool. The
+service worker is only registered on pages that opt in, so blog and
+homepage visitors never see any install prompt (not even Chrome's
+fallback "install this site" option) and ship zero client-side JS.
 
 To add a new installable tool:
 
@@ -210,14 +211,21 @@ To add a new installable tool:
    scripts/generate-tool-icons.mjs to produce 192, 512, and
    512-maskable PNGs from favicon.svg; pass a custom SVG path as
    the second arg if needed).
-4. Link the manifest in the tool's page head:
-     <link rel="manifest" href="/tools/<slug>/manifest.webmanifest">
+4. Link the manifest and the service-worker registration script in
+   the tool's page head, via the BaseLayout named `head` slot:
+     <link slot="head" rel="manifest" href="/tools/<slug>/manifest.webmanifest">
+     <script slot="head" is:inline src="/registerSW.js"></script>
 5. Build and verify in Chrome DevTools > Application that the page
    is installable and works offline after first load.
 
-To add a non-installable tool, do only step 1. The service worker
-will still cache it for fast repeat loads.
+To add a non-installable tool, do only step 1. It stays pure static
+HTML with no service worker and no install affordance.
 
-Do not add a root-level manifest. Do not link any manifest from
-shared layouts. Those would make the entire site installable, which
-is not the intent.
+The top nav is hidden inside installed PWAs via a
+`@media (display-mode: standalone)` rule in global.css. Installed
+tools feel self-contained; regular browser tabs are unaffected.
+
+Do not add a root-level manifest. Do not link any manifest or the
+register script from shared layouts. Either would make non-tool
+pages installable (Chrome offers a fallback install for any page
+with a service worker), which is not the intent.
