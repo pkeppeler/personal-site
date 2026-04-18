@@ -226,19 +226,31 @@ To add a new installable tool:
    scripts/generate-tool-icons.mjs to produce 192, 512, and
    512-maskable PNGs from favicon.svg; pass a custom SVG path as
    the second arg if needed).
-4. Link the manifest and the service-worker registration script in
-   the tool's page head, via the BaseLayout named `head` slot:
+4. Link the manifest, the service-worker registration script, and
+   the standalone-mode nav-hiding rule in the tool's page head, via
+   the BaseLayout named `head` slot:
      <link slot="head" rel="manifest" href="/tools/<slug>/manifest.webmanifest">
      <script slot="head" is:inline src="/registerSW.js"></script>
+     <style slot="head" is:inline>
+       @media (display-mode: standalone) {
+         header nav { display: none; }
+       }
+     </style>
 5. Build and verify in Chrome DevTools > Application that the page
    is installable and works offline after first load.
 
 To add a non-installable tool, do only step 1. It stays pure static
 HTML with no service worker and no install affordance.
 
-The top nav is hidden inside installed PWAs via a
-`@media (display-mode: standalone)` rule in global.css. Installed
-tools feel self-contained; regular browser tabs are unaffected.
+The top nav is hidden inside installed PWAs via a per-tool
+`@media (display-mode: standalone)` rule in the tool's head (step 4).
+Installed tools feel self-contained; regular browser tabs are
+unaffected. The rule is intentionally per-tool rather than in
+global.css because Chrome on Android offers "universal install" on
+any page via the three-dot menu — if the rule were global, a user
+who installed the homepage as a shortcut would lose the nav in that
+standalone window too. Keep the rule scoped to pages that actually
+opt in to being PWAs.
 
 Do not add a root-level manifest. Do not link any manifest or the
 register script from shared layouts. Either would make non-tool
