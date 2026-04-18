@@ -229,3 +229,13 @@ Do not add a root-level manifest. Do not link any manifest or the
 register script from shared layouts. Either would make non-tool
 pages installable (Chrome offers a fallback install for any page
 with a service worker), which is not the intent.
+
+## Writing blog posts
+
+Before writing, editing, or reviewing any post in
+`src/content/posts/`, read `blog-post-guidelines.md` in full. It
+covers the pre-writing interview approach, the interview questions
+to ask the author, tone and structure conventions, length targets,
+and formatting rules (including the em-dash ban). Do not skip it or
+try to infer the rules from context; the conventions have been
+iterated on based on reader feedback.
