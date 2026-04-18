@@ -27,8 +27,10 @@ const dateFmt: Intl.DateTimeFormatOptions = {
           <time datetime={post.data.pubDate.toISOString()}>
             {post.data.pubDate.toLocaleDateString('en-US', dateFmt)}
           </time>
-          <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-          <AuthorshipBadge authorship={post.data.authorship} />
+          <span class="post-entry">
+            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+            <AuthorshipBadge authorship={post.data.authorship} />
+          </span>
         </li>
       ))}
     </ul>

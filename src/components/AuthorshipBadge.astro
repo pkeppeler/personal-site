@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { authorship, expandable = false } = Astro.props;
-const label = authorship === 'human' ? 'human written' : 'drafted with claude';
+const label = authorship === 'human' ? 'human written' : 'drafted with ai';
 const variant = authorship === 'human' ? 'human' : 'ai';
 ---
 

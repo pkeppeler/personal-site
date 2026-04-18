@@ -114,6 +114,10 @@ ul.posts li time {
   min-width: 6.5rem;
 }
 
+ul.posts .authorship-badge {
+  margin-left: 0.5rem;
+}
+
 article header {
   margin-bottom: 2rem;
 }
