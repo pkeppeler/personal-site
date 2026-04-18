@@ -2,6 +2,7 @@
 title: "I Built This Site Entirely From My Phone"
 description: "How I built and deployed a personal site and technical blog using Claude Code on a Galaxy S26, without ever opening a laptop."
 pubDate: 2026-04-10
+authorship: ai-drafted
 ---
 
 Two days ago I decided I wanted a personal site. Something simple: a bio, some links, a blog for technical writing. I'm a backend engineer with seven years of experience (Palantir, Vannevar Labs, now Pryzm) but I've never had a canonical place on the internet. That felt like a gap worth closing.

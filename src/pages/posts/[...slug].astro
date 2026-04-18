@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AuthorshipBadge from '../../components/AuthorshipBadge.astro';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -37,6 +38,7 @@ const dateFmt: Intl.DateTimeFormatOptions = {
       <time datetime={post.data.pubDate.toISOString()}>
         {post.data.pubDate.toLocaleDateString('en-US', dateFmt)}
       </time>
+      <AuthorshipBadge authorship={post.data.authorship} expandable={true} />
     </header>
     <Content />
   </article>

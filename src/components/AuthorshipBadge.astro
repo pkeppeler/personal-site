@@ -1,0 +1,33 @@
+---
+interface Props {
+  authorship: 'human' | 'ai-drafted';
+  expandable?: boolean;
+}
+
+const { authorship, expandable = false } = Astro.props;
+const label = authorship === 'human' ? 'human written' : 'ai drafted';
+const variant = authorship === 'human' ? 'human' : 'ai';
+---
+
+{expandable ? (
+  <details class="authorship">
+    <summary class={`authorship-badge ${variant}`}>{label}</summary>
+    {authorship === 'human' ? (
+      <p>
+        I wrote this one myself, start to finish. Claude may have caught
+        typos or suggested small edits, but the prose, structure, and
+        argument are mine.
+      </p>
+    ) : (
+      <p>
+        Claude interviewed me about this project (what triggered it, what
+        surprised me, what I'd copy and what I wouldn't), then drafted the
+        post from my answers. I iterated on edits with Claude for voice,
+        accuracy, and details Claude couldn't know. The claims and opinions
+        are mine; the initial prose is Claude's.
+      </p>
+    )}
+  </details>
+) : (
+  <span class={`authorship-badge ${variant}`}>{label}</span>
+)}

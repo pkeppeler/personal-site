@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AuthorshipBadge from '../components/AuthorshipBadge.astro';
 ---
 
 <BaseLayout
@@ -50,36 +51,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     collection.
   </p>
 
-  <h2>AI workflow</h2>
+  <h2 id="content-badges">Content badges</h2>
+
+  <p>Every post carries one of these badges at the top:</p>
 
   <p>
-    I use Claude Code as a development partner for the projects I write
-    about here, and I use Claude to help draft the posts as well.
-    Specifically:
+    <AuthorshipBadge authorship="human" />
+    Written by me start to finish. Claude may have caught typos, but
+    the prose, structure, and argument are mine.
   </p>
 
-  <ul>
-    <li>
-      The code, configuration, and design of this site were written
-      collaboratively with Claude. I reviewed every file before merging.
-    </li>
-    <li>
-      Most blog posts start as a draft from Claude based on my notes and
-      lived experience of the project. I then edit them for voice and
-      accuracy, and add personal details Claude couldn't know.
-    </li>
-    <li>
-      Future posts may vary in how collaborative they are. If a post is
-      meaningfully AI-drafted, assume that's the default unless I say
-      otherwise.
-    </li>
-  </ul>
-
   <p>
-    AI leverage is the reason this blog exists. The projects I write about
-    are projects I built with Claude, and the posts themselves follow the
-    same workflow. Without it, both would be things I plan to do eventually
-    instead of things that actually exist.
+    <AuthorshipBadge authorship="ai-drafted" />
+    Claude interviewed me about the project, drafted from my answers,
+    and iterated with me on edits. The claims and opinions are mine;
+    the initial prose is Claude's.
   </p>
 
   <h2>Contact</h2>

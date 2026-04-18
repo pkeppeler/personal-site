@@ -56,6 +56,20 @@ come from this list.
   inconsistencies to flag, alternatives that exist but weren't
   chosen.
 
+## Authorship label
+
+Every post has an `authorship` frontmatter field, required, one of:
+
+- `ai-drafted` — the default for this blog. Claude interviews the
+  author (see above), drafts from the answers, and iterates with
+  the author on edits. The badge on the post reads "ai drafted"
+  and expands to an explainer.
+- `human` — the author wrote the prose start to finish. Claude may
+  have caught typos or suggested small edits, but the draft is the
+  author's. The badge reads "human written".
+
+When in doubt, ask the author which label applies. Do not guess.
+
 ## Writing the post
 
 Posts read like notes from an engineer who built something and wants

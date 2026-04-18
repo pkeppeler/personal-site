@@ -83,9 +83,11 @@ Keep posts portable across markdown-based static site generators:
   post needs something markdown can't express, write raw HTML in the markdown
   file — every SSG passes raw HTML through.
 - Frontmatter fields (`title`, `description`, `pubDate`, `updatedDate`,
-  `draft`) are the stable interface. Don't add generator-specific frontmatter
-  fields to posts without updating `src/content.config.ts` and thinking about
-  whether the new field is portable.
+  `draft`, `authorship`) are the stable interface. Don't add generator-specific
+  frontmatter fields to posts without updating `src/content.config.ts` and
+  thinking about whether the new field is portable. `authorship` is required
+  and must be either `human` or `ai-drafted`; it drives the badge rendered
+  at the top of each post.
 - Do not put logic in `src/content/`. It's data, not code.
 
 ## Security / supply chain hygiene
