@@ -120,20 +120,6 @@ tight, copyable.
   DevTools on a laptop despite writing about phone-only development,
   say so.
 
-## Frontmatter
-
-Posts live in `src/content/posts/*.md`. Required frontmatter fields
-are defined in `src/content.config.ts` and must match:
-
-- `title` — string
-- `description` — string; used for SEO and Open Graph previews
-- `pubDate` — date
-- `updatedDate` — optional date
-- `draft` — optional boolean, defaults to false
-
-Do not add new frontmatter fields without updating the schema and
-thinking about portability across static site generators.
-
 ## Iterating
 
 - Expect multiple revision rounds. The first draft is a starting
