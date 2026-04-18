@@ -4,7 +4,7 @@ description: "AI tools like Claude Code make it cheap enough to hand-roll your o
 pubDate: 2026-04-17
 ---
 
-This week I built a markdown viewer for my phone, then made it an installable PWA that works offline. The viewer took an afternoon. The offline conversion took another. Both were built in 15- and 30-minute sessions during a trip to Milan: on a train into the city, in the back of a taxi, waiting at my gate for a flight, and over a solo espresso at a cafe.
+This week I built a markdown viewer for my phone, then turned it into an installable PWA that works offline. I did it in two short evenings, broken into 15- and 30-minute sessions during a trip to Milan: on a train into the city, in the back of a taxi, waiting at my gate for a flight, and over a solo espresso at a cafe.
 
 The real thing I built, though, is the pattern. AI tools like Claude Code make it cheap enough to hand-roll your own small web tools that "find a third-party site for this" shouldn't be the default anymore. And the classic "write program, deploy, try using the thing" dev loop now runs entirely on a phone. "I wish a tool existed" becomes "the tool is on my home screen and works on a plane" in one evening.
 
@@ -19,7 +19,7 @@ The workarounds I considered:
 - **Open it as plain text.** Fine, but I wanted it rendered.
 - **Paste it into Claude and ask it to render.** Works, but it's a wasteful use of a powerful tool for what's ultimately a trivial text transformation. Also requires a network connection.
 - **Use a third-party markdown viewer site or app.** Likely works, but I have no idea what any of them do with my files or data.
-- **Convert it to a PDF first** (usually by asking Claude). Same wastefulness, same network requirement. It's what I've been doing when I send artifacts to non-technical collaborators, but for two engineers sharing notes, markdown is increasingly the AI-native artifact format: lightweight, easy to parse, easy to edit. If my brother and I are going to work on AI-heavy projects together, we should just be able to send each other `.md` files.
+- **Convert it to a PDF first** (usually by asking Claude). Same wastefulness, same network requirement. It's what I've been doing when I send artifacts to non-technical collaborators, but for two people sharing notes on an AI-heavy project, markdown is increasingly the natural artifact format: lightweight, easy to parse, easy to edit. If my brother and I are going to work on something together, we should just be able to send each other `.md` files.
 
 I'm sure there are reputable markdown viewers out there, or ones built into platforms I already use. The point here wasn't that none exist. It was doing the project as an exercise in rolling my own.
 
@@ -29,7 +29,7 @@ So I did. It's at [/tools/viewer](/tools/viewer/). One Claude Code session, one 
 
 Then I wanted to use it on a plane.
 
-Offline isn't something I bolt on. Every app I depend on has some subset of functionality that quietly falls over when the network does, and it's almost always worse than it needs to be. Spotify's "offline mode" leaves much to be desired. If my phone is on airplane mode but Spotify isn't explicitly set offline, the app spins forever instead of short-circuiting to a better behavior. The Claude mobile app re-fetches my current conversation over the network every time I switch back in. None of this is a hard problem. It's just not prioritized.
+Offline isn't something I bolt on. Some functionality genuinely requires the network, and that's fine: I can't stream new music or start a fresh Claude conversation with the plane's wifi off. But that requirement gets pushed onto everything, including things that have no reason to need a connection. Every app I depend on has some subset of functionality that quietly falls over when the network does, and it's almost always worse than it needs to be. Spotify's "offline mode" leaves much to be desired. If my phone is on airplane mode but Spotify isn't explicitly set offline, the app spins forever instead of short-circuiting to a better behavior. The Claude mobile app re-fetches my current conversation over the network every time I switch back in. None of this is a hard problem. It's just not prioritized.
 
 When I build my own tools, it's going to be prioritized. A client-side markdown viewer has no business being online-only.
 
@@ -45,7 +45,7 @@ Per-tool from the start, for optionality. If I build a heavier tool later that d
 
 ## The stack that makes this fast
 
-The viewer went from "annoyance on my phone" to "installable offline app" in two short sessions because every piece of the stack is optimized for a short mobile loop:
+I went from "annoyance on my phone" to "installable offline app" in two short sessions because every piece of the stack is optimized for a short mobile loop:
 
 - **Claude Code in the mobile app.** Real terminal, remote. Reads the repo, writes files, runs commands.
 - **Astro.** Static output, zero JS by default, file-based routing. A new tool is a new `.astro` page.
