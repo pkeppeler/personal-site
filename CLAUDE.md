@@ -233,7 +233,7 @@ To add a new installable tool:
      <script slot="head" is:inline src="/registerSW.js"></script>
      <style slot="head" is:inline>
        @media (display-mode: standalone) {
-         header nav { display: none; }
+         body header nav { display: none; }
        }
      </style>
 5. Build and verify in Chrome DevTools > Application that the page
