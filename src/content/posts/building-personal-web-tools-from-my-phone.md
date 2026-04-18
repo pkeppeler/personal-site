@@ -53,6 +53,8 @@ I went from "annoyance on my phone" to "installable offline app" in two short se
 
 AI is what makes this loop close. I'm a backend engineer; the frontend bits I don't know (service workers, CSS, PWA minutiae) I ask Claude about and review as we go. A year ago this would have been a half-day of reading docs on a phone screen. Now it's a conversation I can have while the bus moves.
 
+If you want to copy the pattern, the per-tool checklist I use (exact file layout, manifest fields, icon generation) is in my [`CLAUDE.md`](https://github.com/pkeppeler/personal-site/blob/main/CLAUDE.md).
+
 ## What surprised me
 
 Chrome's "Install app" is a genuinely good first-class experience on mobile. Tap a button, app on your home screen. I expected it to feel more obscure. Given how polished the experience is, I don't fully understand why more lightweight tools and reading apps aren't installable.
@@ -66,18 +68,6 @@ And that changes what I'm willing to build. When a project doesn't require block
 One caveat: I did open Chrome DevTools on a laptop exactly once, to sanity-check that the "Application" tab was detecting the PWA correctly. I haven't found a mobile-only way to inspect service-worker state and installability yet.
 
 The project took three sessions: Claude Code to build the viewer, a Claude chat to figure out what a PWA even is, a second Claude Code session to implement the PWA layer. The middle chat was the eng-review-planning phase. It let me hand Claude Code a clean, informed prompt the second time instead of making architecture decisions on the fly.
-
-## The approach, if you want to copy it
-
-The useful takeaway isn't my specific config. It's that a browser-based, client-side JS tool can become an installable, offline-capable, app-like thing with surprisingly little effort. You don't need native frameworks, app store accounts, or a backend. The ingredients:
-
-- **A static site host that deploys on push.** Cloudflare Pages is free and fast. Vercel, Netlify, or GitHub Pages work too.
-- **A PWA wrapper that generates a service worker and per-tool manifests.** I use `@vite-pwa/astro`, but any Workbox-based setup does the same job.
-- **An AI coding assistant that runs on your phone.** Claude Code in the mobile app is what lets me ship code from wherever.
-
-That's most of the leverage. The result is a tool that loads and iterates as fast as a webpage, installs to your phone like an app, and works offline like it was always meant to.
-
-The per-tool checklist I use (exact file layout, manifest fields, icon generation) is in my [`CLAUDE.md`](https://github.com/pkeppeler/personal-site/blob/main/CLAUDE.md) if you want the specifics.
 
 ## What's next
 
