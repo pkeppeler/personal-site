@@ -201,6 +201,19 @@ service worker is only registered on pages that opt in, so blog and
 homepage visitors never see any install prompt (not even Chrome's
 fallback "install this site" option) and ship zero client-side JS.
 
+The SW is built to `/tools/sw.js` with browser scope `/tools/`
+(see `astro.config.mjs`). Browser scope is the enforcement: the SW
+physically cannot intercept requests outside `/tools/`, so the
+homepage and blog stay SW-free even for visitors who previously
+installed a tool. Do not move the SW back to the site root; doing
+so would silently make every page SW-controlled and re-introduce
+stale-content bugs on the homepage.
+
+`public/sw.js` is a self-destroying migration shim left over from
+the period when the SW was at site root. It unregisters itself and
+clears caches on first activation. Once you're confident every prior
+visitor has loaded the site at least once, delete it.
+
 To add a new installable tool:
 
 1. Create the page: `src/pages/tools/<slug>.astro` (flat, single-file;
