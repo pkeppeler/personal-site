@@ -61,9 +61,9 @@ Chrome's "Install app" is a genuinely good first-class experience on mobile. Tap
 
 ## Still no laptop
 
-Like the [last post](/posts/i-built-this-site-entirely-from-my-phone/), this was built on a Galaxy S26. I've started treating it as a rule: whatever this site needs, I should be able to do from my phone. That rule is part of the reason I built the tool this way. Giving myself a laptop would have meant a bigger tool, a fancier build system, more dependencies, probably a service I don't need. Phone-only keeps the scope honest.
+Like the [last post](/posts/i-built-this-site-entirely-from-my-phone/), this was built on a Galaxy S26. Not because I've made phone-only a rule, but because I've realized I can. What's been clicking for me lately is that the actual dev loop, not just writing code but the full "write program, deploy, try using the thing" cycle, works entirely on a phone now. Claude Code writes. Cloudflare Pages gives me a preview URL within a minute of a push. GitHub mobile shows me the diff for review. I can run that loop from a train, a taxi, a gate at the airport, a cafe. The same loop I'd run at a desk, just spread across smaller windows of time.
 
-What's been clicking for me lately is that the actual dev loop, not just writing code but the full "write program, deploy, try using the thing" cycle, works entirely on a phone now. Claude Code writes. Cloudflare Pages gives me a preview URL within a minute of a push. GitHub mobile shows me the diff for review. I can run that loop from a train, a taxi, a gate at the airport, a cafe. The same loop I'd run at a desk, just spread across smaller windows of time.
+And that changes what I'm willing to build. When a project doesn't require blocking out time at a desk, I don't have to save it for a dedicated session. I can pick it up in the in-between moments of a day and still ship, which probably means I'll pick it up more.
 
 One caveat: I did open Chrome DevTools on a laptop exactly once, to sanity-check that the "Application" tab was detecting the PWA correctly. I haven't found a mobile-only way to inspect service-worker state and installability yet.
 
