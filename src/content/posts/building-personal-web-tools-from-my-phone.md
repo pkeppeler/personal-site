@@ -6,7 +6,7 @@ pubDate: 2026-04-17
 
 This week I built a markdown viewer for my phone, then turned it into an installable PWA that works offline. I did it in two short evenings, broken into 15- and 30-minute sessions during a trip to Milan: on a train into the city, in the back of a taxi, waiting at my gate for a flight, and over a solo espresso at a cafe.
 
-The real thing I built, though, is the pattern. AI tools like Claude Code make it cheap enough to hand-roll your own small web tools that "find a third-party site for this" shouldn't be the default anymore. And the classic "write program, deploy, try using the thing" dev loop now runs entirely on a phone. "I wish a tool existed" becomes "the tool is on my home screen and works on a plane" in one evening.
+The real thing I built, though, is the pattern. AI tools like Claude Code make it cheap enough to hand-roll your own small web tools that "find a third-party site for this" shouldn't be the default anymore. And the classic "write program, deploy, try using the thing" dev loop now runs entirely on a phone. "I wish a tool existed" becomes "the tool is on my home screen and works on a plane."
 
 This post is about that pattern. The markdown viewer is just Exhibit A.
 
@@ -31,9 +31,7 @@ Then I wanted to use it on a plane.
 
 Offline isn't something I bolt on. Some functionality genuinely requires the network, and that's fine: I can't stream new music or start a fresh Claude conversation with the plane's wifi off. But that requirement gets pushed onto everything, including things that have no reason to need a connection. Every app I depend on has some subset of functionality that quietly falls over when the network does, and it's almost always worse than it needs to be. Spotify's "offline mode" leaves much to be desired. If my phone is on airplane mode but Spotify isn't explicitly set offline, the app spins forever instead of short-circuiting to a better behavior. The Claude mobile app re-fetches my current conversation over the network every time I switch back in. None of this is a hard problem. It's just not prioritized.
 
-When I build my own tools, it's going to be prioritized. A client-side markdown viewer has no business being online-only.
-
-That's what a PWA gives you: a home-screen icon, a service worker doing the offline work, one codebase behind all of it. I only want to maintain one thing.
+When I build my own tools, it's going to be prioritized. A client-side markdown viewer has no business being online-only, and a PWA is exactly the shape of the fix: a home-screen icon, a service worker doing the offline work, one codebase behind all of it. I only want to maintain one thing.
 
 ## Per-tool PWAs, not site-wide
 
@@ -61,7 +59,7 @@ Chrome's "Install app" is a genuinely good first-class experience on mobile. Tap
 
 ## Still no laptop
 
-Like the [last post](/posts/i-built-this-site-entirely-from-my-phone/), this was built on a Galaxy S26. Not because I've made phone-only a rule, but because I've realized I can. What's been clicking for me lately is that the actual dev loop, not just writing code but the full "write program, deploy, try using the thing" cycle, works entirely on a phone now. Claude Code writes. Cloudflare Pages gives me a preview URL within a minute of a push. GitHub mobile shows me the diff for review. I can run that loop from a train, a taxi, a gate at the airport, a cafe. The same loop I'd run at a desk, just spread across smaller windows of time.
+Like the [last post](/posts/i-built-this-site-entirely-from-my-phone/), this was built on a Galaxy S26. Not because I've made phone-only a rule, but because I've realized I can. What's been clicking for me lately is that the actual dev loop, not just writing code but the full "write program, deploy, try using the thing" cycle, works entirely on a phone now. I can run it from a train, a taxi, a gate at the airport, a cafe. The same loop I'd run at a desk, just spread across smaller windows of time.
 
 And that changes what I'm willing to build. When a project doesn't require blocking out time at a desk, I don't have to save it for a dedicated session. I can pick it up in the in-between moments of a day and still ship, which probably means I'll pick it up more.
 
@@ -75,7 +73,7 @@ The useful takeaway isn't my specific config. It's that a browser-based, client-
 
 - **A static site host that deploys on push.** Cloudflare Pages is free and fast. Vercel, Netlify, or GitHub Pages work too.
 - **A PWA wrapper that generates a service worker and per-tool manifests.** I use `@vite-pwa/astro`, but any Workbox-based setup does the same job.
-- **An AI coding assistant that runs on your phone.** Claude Code in the mobile app lets me ship code from wherever. The parts of the stack I don't want to become an expert in (service workers, CSS, PWA minutiae) are a conversation away.
+- **An AI coding assistant that runs on your phone.** Claude Code in the mobile app is what lets me ship code from wherever.
 
 That's most of the leverage. The result is a tool that loads and iterates as fast as a webpage, installs to your phone like an app, and works offline like it was always meant to.
 
