@@ -5,6 +5,8 @@
   --accent: #0052cc;
   --border: #e5e5e5;
   --code-bg: #f6f6f6;
+  --badge-human: #4a7a5a;
+  --badge-ai: #666;
   --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --measure: 38rem;
@@ -119,6 +121,48 @@ article header {
 article header h1 {
   margin-top: 0;
   margin-bottom: 0.25rem;
+}
+
+.authorship-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid;
+  border-radius: 3px;
+  letter-spacing: 0.01em;
+}
+
+.authorship-badge.human {
+  color: var(--badge-human);
+  border-color: var(--badge-human);
+}
+
+.authorship-badge.ai {
+  color: var(--badge-ai);
+  border-color: var(--badge-ai);
+}
+
+details.authorship {
+  margin: 0.75rem 0 0;
+}
+
+details.authorship > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details.authorship > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.authorship > p {
+  margin: 0.75rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--border);
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 article pre {
