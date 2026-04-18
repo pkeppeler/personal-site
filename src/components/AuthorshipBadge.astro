@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { authorship, expandable = false } = Astro.props;
-const label = authorship === 'human' ? 'human written' : 'drafted with ai';
+const label = authorship === 'human' ? 'human written' : 'ai drafted';
 const variant = authorship === 'human' ? 'human' : 'ai';
 ---
 
@@ -16,8 +16,7 @@ const variant = authorship === 'human' ? 'human' : 'ai';
       <p>
         I wrote this one myself, start to finish. Claude may have caught
         typos or suggested small edits, but the prose, structure, and
-        argument are mine. See the <a href="/about/#ai-workflow">about page</a>
-        for why I flag this per-post.
+        argument are mine.
       </p>
     ) : (
       <p>
@@ -25,8 +24,7 @@ const variant = authorship === 'human' ? 'human' : 'ai';
         surprised me, what I'd copy and what I wouldn't), then drafted the
         post from my answers. I iterated on edits with Claude for voice,
         accuracy, and details Claude couldn't know. The claims and opinions
-        are mine; the initial prose is Claude's. See the
-        <a href="/about/#ai-workflow">about page</a> for the full workflow.
+        are mine; the initial prose is Claude's.
       </p>
     )}
   </details>
