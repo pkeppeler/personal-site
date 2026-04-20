@@ -57,34 +57,10 @@ jobs:
 
       - name: Comment preview URL on PR
         if: github.event_name == 'pull_request'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
-        env:
-          PREVIEW_URL: ${{ steps.preview.outputs.deployment-url }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        uses: marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0 # v3.0.4
         with:
-          script: |
-            const marker = '<!-- cloudflare-workers-preview -->';
-            const url = process.env.PREVIEW_URL;
-            const sha = process.env.HEAD_SHA.slice(0, 7);
-            const body = `${marker}\n**Preview deploy:** ${url}\n\nCommit: \`${sha}\``;
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            const existing = comments.find(c => c.body?.includes(marker));
-            if (existing) {
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: existing.id,
-                body,
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body,
-              });
-            }
+          header: cloudflare-workers-preview
+          message: |
+            **Preview deploy:** ${{ steps.preview.outputs.deployment-url }}
+
+            Commit: ${{ github.event.pull_request.head.sha }}
