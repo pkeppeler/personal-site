@@ -187,7 +187,8 @@ See `CLAUDE.md` for the full list of project constraints. Short version:
 - pnpm default-deny on lifecycle scripts (`onlyBuiltDependencies` allow-list).
 - `pnpm install --frozen-lockfile` locally and in CI. Lockfile is committed.
 - Node 22.x pinned via `engines` + `.nvmrc` + `engine-strict=true`.
-- pnpm version pinned via `packageManager` field (Corepack).
+- pnpm version pinned via `packageManager` field (Corepack locally,
+  `pnpm/action-setup` in CI).
 - Dependabot opens weekly grouped PRs. **No auto-merge.** Review lockfile
   diffs before merging.
 - Minimum dependencies. Prefer official `@astrojs/*` integrations over

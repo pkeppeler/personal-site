@@ -14,7 +14,8 @@ maintenance. Readable on a slow connection.
 ## Tech stack (chosen, don't change without discussion)
 
 - **Astro** — static site generator. Markdown content, `.astro` templates.
-- **pnpm** — package manager, via Corepack. Version pinned in `package.json`.
+- **pnpm** — package manager. Version pinned in `package.json` (resolved
+  by Corepack locally, `pnpm/action-setup` in CI).
 - **Shiki** — syntax highlighting (bundled with Astro, build-time, no client JS).
 - **@astrojs/rss** and **@astrojs/sitemap** — official integrations only.
 - **Cloudflare Workers Static Assets** — hosting. Deployed via
@@ -97,8 +98,11 @@ Keep posts portable across markdown-based static site generators:
 ### Package manager
 
 - **pnpm only.** Do not add `package-lock.json`, `yarn.lock`, or `bun.lockb`.
-- pnpm version is pinned via the `packageManager` field in `package.json` and
-  managed through Corepack.
+- pnpm version is pinned via the `packageManager` field in `package.json`.
+  Local development resolves the pin through
+  [Corepack](https://nodejs.org/api/corepack.html) (bundled with Node); CI
+  uses [`pnpm/action-setup`](https://github.com/pnpm/action-setup), which
+  reads the same field. Both paths land on exactly the pinned version.
 - **Lockfile (`pnpm-lock.yaml`) is committed** and is the source of truth.
   Review lockfile diffs in PRs — large unexplained changes are a red flag.
 - **Always install with `pnpm install --frozen-lockfile`** locally and in CI.
@@ -167,7 +171,7 @@ use them, not the day you think you might.
 - Pinned to Node 22.x via three mechanisms working together:
   - `engines.node` in `package.json` (enforced by `engine-strict=true`)
   - `.nvmrc` (for local version managers and CI)
-  - `packageManager` field (for pnpm via Corepack)
+  - `packageManager` field (pins pnpm version)
 - Bumping Node means updating all three in the same commit.
 
 ## Style and UX rules
