@@ -17,7 +17,9 @@ maintenance. Readable on a slow connection.
 - **pnpm** — package manager, via Corepack. Version pinned in `package.json`.
 - **Shiki** — syntax highlighting (bundled with Astro, build-time, no client JS).
 - **@astrojs/rss** and **@astrojs/sitemap** — official integrations only.
-- **Cloudflare Pages** — hosting.
+- **Cloudflare Workers Static Assets** — hosting. Deployed via
+  [Wrangler](https://developers.cloudflare.com/workers/wrangler/) from a
+  GitHub Actions workflow (`.github/workflows/deploy.yml`).
 - **One hand-written `global.css`**. No Tailwind, no CSS framework, no
   component library.
 
@@ -164,7 +166,7 @@ use them, not the day you think you might.
 
 - Pinned to Node 22.x via three mechanisms working together:
   - `engines.node` in `package.json` (enforced by `engine-strict=true`)
-  - `.nvmrc` (for local version managers and Cloudflare Pages)
+  - `.nvmrc` (for local version managers and CI)
   - `packageManager` field (for pnpm via Corepack)
 - Bumping Node means updating all three in the same commit.
 
@@ -185,8 +187,13 @@ use them, not the day you think you might.
 - `pnpm dev` — dev server with hot reload at <http://localhost:4321>
 - `pnpm build` — static build to `dist/`
 - `pnpm preview` — preview built output
-- Cloudflare Pages builds on push to `main`. Build command:
-  `pnpm install --frozen-lockfile && pnpm build`. Output: `dist/`.
+- `.github/workflows/deploy.yml` builds and deploys to Cloudflare Workers
+  on push to `main`: `pnpm install --frozen-lockfile && pnpm build &&
+  pnpm exec wrangler deploy`. Output: `dist/` (served as Static Assets).
+  Pull requests get a preview deploy at
+  `https://pr-<N>-personal-site.<subdomain>.workers.dev`, posted as a
+  sticky comment on the PR. Requires `CLOUDFLARE_API_TOKEN` and
+  `CLOUDFLARE_ACCOUNT_ID` repo secrets.
 
 ## When in doubt
 

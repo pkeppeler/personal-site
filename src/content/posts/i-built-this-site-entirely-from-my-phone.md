@@ -2,8 +2,11 @@
 title: "I Built This Site Entirely From My Phone"
 description: "How I built and deployed a personal site and technical blog using Claude Code on a Galaxy S26, without ever opening a laptop."
 pubDate: 2026-04-10
+updatedDate: 2026-04-20
 authorship: ai-drafted
 ---
+
+> _Editor's note, April 2026: Cloudflare now recommends Workers Static Assets for new static sites, so I migrated this site off Pages. The post below describes the stack as it was at the time of writing, and the Cloudflare OAuth saga that comes with it._
 
 Two days ago I decided I wanted a personal site. Something simple: a bio, some links, a blog for technical writing. I'm a backend engineer with seven years of experience (Palantir, Vannevar Labs, now Pryzm) but I've never had a canonical place on the internet. That felt like a gap worth closing.
 
