@@ -205,13 +205,12 @@ re-points a tag at malicious code.
 - `pnpm dev` — dev server with hot reload at <http://localhost:4321>
 - `pnpm build` — static build to `dist/`
 - `pnpm preview` — preview built output
-- `.github/workflows/deploy.yml` builds and deploys to Cloudflare Workers
-  on push to `main`: `pnpm install --frozen-lockfile && pnpm build &&
-  pnpm exec wrangler deploy`. Output: `dist/` (served as Static Assets).
-  Pull requests get a preview deploy at
-  `https://pr-<N>-personal-site.<subdomain>.workers.dev`, posted as a
-  sticky comment on the PR. Requires `CLOUDFLARE_API_TOKEN` and
-  `CLOUDFLARE_ACCOUNT_ID` repo secrets.
+- `.github/workflows/deploy.yml` builds the site and deploys to Cloudflare
+  Workers on push to `main`, via `cloudflare/wrangler-action`. Output:
+  `dist/` (served as Static Assets). Pull requests upload a preview version
+  and update a sticky comment on the PR with the per-version preview URL;
+  each new commit points the comment at its own version. Requires
+  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repo secrets.
 
 ## When in doubt
 
