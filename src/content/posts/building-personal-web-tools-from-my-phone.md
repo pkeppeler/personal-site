@@ -2,8 +2,11 @@
 title: "Building Personal Web Tools From My Phone, Starting With an Offline Markdown Viewer"
 description: "AI tools like Claude Code make it cheap enough to hand-roll your own small web tools instead of relying on potentially sketchy third-party sites. I built a markdown viewer, then turned it into an installable PWA that works offline, entirely from my phone."
 pubDate: 2026-04-18
+updatedDate: 2026-04-20
 authorship: ai-drafted
 ---
+
+> _Editor's note, April 2026: Cloudflare now recommends Workers Static Assets for new static sites, so I migrated this site off Pages. The post below describes the stack as it was at the time of writing._
 
 This week I built a markdown viewer for my phone, then turned it into an installable PWA that works offline. I did it in two short evenings, broken into 15- and 30-minute sessions during a trip to Milan: on a train into the city, in the back of a taxi, waiting at my gate for a flight, and over a solo espresso at a cafe.
 
