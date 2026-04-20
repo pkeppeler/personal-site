@@ -164,7 +164,7 @@ vars above):
 
 ```sh
 pnpm build
-pnpm deploy
+pnpm exec wrangler deploy
 ```
 
 Before the first deploy to a new domain, update `site` in `astro.config.mjs`
