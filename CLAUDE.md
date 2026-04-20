@@ -137,34 +137,48 @@ Keep posts portable across markdown-based static site generators:
 
 ### Deliberate dependencies
 
-Every dependency should earn its keep. The goal is _deliberate_ dependencies,
-not _minimal_ dependencies — don't reinvent a mature library for a non-trivial
-problem, but don't add a package for a five-line problem either. Before
-adding a dependency, walk through these questions:
+Every dependency should earn its keep, whether it's an npm package or
+a GitHub Action. The goal is _deliberate_ dependencies, not _minimal_
+dependencies — don't reinvent something mature for a non-trivial
+problem, but don't add a supplier for a five-line problem either.
+Before adding one, walk through these questions:
 
-1. **Is it a well-defined, non-trivial problem** that a mature library
-   solves better than you could (markdown parsing, RSS/XML generation,
-   date/time parsing, cryptography, URL handling, image processing)? If
-   yes, take the library.
-2. **Is it a tiny one-off** you could write in ~20 lines (string formatting,
-   one-shot array helpers, a single date format)? If yes, write the 20
-   lines. Don't pull in `left-pad`.
-3. **Is it first-party to something you already depend on** (e.g.
-   `@astrojs/*` when Astro is already installed)? The marginal cost is
-   small; trust is largely inherited from the parent. Prefer these over
-   third-party alternatives that do the same thing.
-4. **Is it a random community package** with a handful of stars, one
-   maintainer, and no recent commits? High supply-chain risk regardless of
-   size. Avoid, or vendor the relevant code directly into the repo.
-5. **How much transitive fanout** does it bring? A package with 3 deps is
-   very different from one with 300. Check `pnpm why <pkg>` or skim the
-   lockfile diff before merging.
-6. **Is there a zero-dep alternative** in the Node standard library or
-   modern JS (`Intl.DateTimeFormat`, `crypto`, `url`, `path`, `fetch`,
-   `Date`, `URL`)? If yes, prefer it.
+1. **Is it a well-defined, non-trivial problem** that a mature
+   implementation solves better than you could (markdown parsing,
+   RSS/XML generation, cryptography, image processing, sticky PR
+   comments, deploying to a vendor, installing a toolchain)? If
+   yes, take it.
+2. **Is it a tiny one-off** you could write in ~20 lines? If yes,
+   write the 20 lines. Don't pull in `left-pad`. Hand-rolled inline
+   `github-script` for a solved GHA pattern is the same anti-pattern
+   as rewriting markdown parsing.
+3. **Is it first-party to something you already depend on**
+   (`@astrojs/*` for Astro, `cloudflare/wrangler-action` for Wrangler,
+   `pnpm/action-setup` for pnpm)? Trust is largely inherited from the
+   parent. Prefer these over third-party equivalents.
+4. **Is it a random community supplier** with a handful of stars,
+   one maintainer, and no recent commits? High supply-chain risk
+   regardless of size. Avoid, or vendor the relevant code into the
+   repo. Ecosystem-canonical community actions (e.g.
+   `marocchino/sticky-pull-request-comment`) clear the bar only if
+   adoption and maintenance are broad.
+5. **How much transitive fanout** does it bring? A package with 3
+   deps is very different from one with 300. Check `pnpm why <pkg>`
+   or read an action's bundled source before trusting it.
+6. **Is there a zero-dep alternative** in the Node standard library,
+   modern JS, or `actions/*` (`Intl.DateTimeFormat`, `crypto`, `url`,
+   `path`, `fetch`, `Date`, `URL`)? If yes, prefer it.
 
-Do not install anything "for later." Add dependencies the day you actually
-use them, not the day you think you might.
+Do not install anything "for later." Add dependencies the day you
+actually use them, not the day you think you might.
+
+**Pinning and review.** npm: lockfile (`pnpm-lock.yaml`) is committed;
+review diffs for unexpected transitive dependencies. GitHub Actions:
+non-`actions/*` actions must be pinned by full commit SHA with a
+version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Dependabot's
+`github-actions` ecosystem tracks and bumps the pins. This defeats
+the tj-actions/changed-files class of attack where a maintainer
+re-points a tag at malicious code.
 
 ### Node version
 
