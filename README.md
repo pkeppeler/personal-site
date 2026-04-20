@@ -25,8 +25,10 @@ that was built on push.
   generation.
 - **[@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)**
   — sitemap generation.
-- **[Cloudflare Pages](https://pages.cloudflare.com)** — hosting. Free,
-  global edge network, unlimited bandwidth, automatic SSL.
+- **[Cloudflare Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/)**
+  — hosting. Global edge network, automatic SSL. Deployed via
+  [Wrangler](https://developers.cloudflare.com/workers/wrangler/) from a
+  GitHub Actions workflow on push to `main`.
 
 One hand-written `global.css` file. No Tailwind, no CSS-in-JS, no component
 library. No dark-mode toggle, no hamburger menu.
@@ -90,8 +92,8 @@ pnpm preview
 3. Write the body in plain markdown. Code fences with a language tag
    (` ```python `, ` ```go `, etc.) are syntax-highlighted at build time.
 4. Preview with `pnpm dev`.
-5. Commit and push to `main`. Cloudflare Pages builds and deploys
-   automatically.
+5. Commit and push to `main`. The GitHub Actions deploy workflow builds
+   and deploys to Cloudflare Workers automatically.
 
 Set `draft: true` to exclude a post from builds while you're still writing
 it. Drafts are hidden from the index, individual pages, and the RSS feed.
@@ -101,6 +103,7 @@ it. Drafts are hidden from the index, individual pages, and the RSS feed.
 ```
 .
 ├── astro.config.mjs         # Astro config (site URL, integrations, Shiki theme)
+├── wrangler.jsonc           # Cloudflare Workers config (Static Assets)
 ├── public/                  # Static assets copied as-is to dist/
 │   └── favicon.svg
 ├── src/
@@ -118,7 +121,9 @@ it. Drafts are hidden from the index, individual pages, and the RSS feed.
 │   └── styles/
 │       └── global.css       # The only CSS file
 ├── .github/
-│   └── dependabot.yml       # Weekly grouped dependency updates
+│   ├── dependabot.yml       # Weekly grouped dependency updates
+│   └── workflows/
+│       └── deploy.yml       # Build + deploy to Cloudflare Workers on push to main
 ├── .nvmrc                   # Node version pin
 ├── .npmrc                   # engine-strict enforcement
 ├── package.json             # Deps, scripts, Node + pnpm version pins
@@ -128,23 +133,39 @@ it. Drafts are hidden from the index, individual pages, and the RSS feed.
 └── README.md                # This file
 ```
 
-## Deployment (Cloudflare Pages)
+## Deployment (Cloudflare Workers Static Assets)
 
-Connect the GitHub repo to a new Cloudflare Pages project. Use these settings:
+The site is deployed as a Cloudflare Worker serving static assets directly
+from `dist/`. There is no server-side code; the Worker config in
+`wrangler.jsonc` points Cloudflare at the built output and nothing more.
 
-- **Framework preset**: Astro
-- **Build command**: `pnpm install --frozen-lockfile && pnpm build`
-- **Build output directory**: `dist`
-- **Environment variables**: none required
-- **Node version**: set via the `.nvmrc` file (Cloudflare Pages reads it
-  automatically)
+Deploys happen automatically via `.github/workflows/deploy.yml` on push to
+`main`. The workflow installs deps with `--frozen-lockfile`, runs
+`pnpm build`, and then `pnpm exec wrangler deploy`.
 
-After the first build succeeds, add the custom domain in the Cloudflare Pages
-dashboard. SSL is automatic.
+Required GitHub Actions repository secrets:
 
-Before the first deploy, update `site` in `astro.config.mjs` to the real
-production domain (it's used for absolute URLs in the RSS feed, sitemap, and
-Open Graph tags).
+- `CLOUDFLARE_API_TOKEN` — scoped token with `Account · Workers Scripts ·
+  Edit` and `Account · Account Settings · Read`. See
+  [Cloudflare's API token docs](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID (visible in the
+  dashboard right sidebar under "API").
+
+Custom domains (`pkepps.com`, `www.pkepps.com`) are attached to the Worker
+via the Cloudflare dashboard under **Workers & Pages → personal-site →
+Settings → Domains & Routes**. DNS and SSL are managed automatically.
+
+Manual deploy from a local checkout (requires `wrangler login` or the env
+vars above):
+
+```sh
+pnpm build
+pnpm deploy
+```
+
+Before the first deploy to a new domain, update `site` in `astro.config.mjs`
+to the real production domain (it's used for absolute URLs in the RSS feed,
+sitemap, and Open Graph tags).
 
 ## Offline tools (PWA)
 
