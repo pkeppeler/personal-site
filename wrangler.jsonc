@@ -3,6 +3,7 @@
   "name": "personal-site",
   "compatibility_date": "2026-04-10",
   "workers_dev": false,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist"
   },

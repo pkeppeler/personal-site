@@ -139,9 +139,14 @@ The site is deployed as a Cloudflare Worker serving static assets directly
 from `dist/`. There is no server-side code; the Worker config in
 `wrangler.jsonc` points Cloudflare at the built output and nothing more.
 
-Deploys happen automatically via `.github/workflows/deploy.yml` on push to
-`main`. The workflow installs deps with `--frozen-lockfile`, runs
-`pnpm build`, and then `pnpm exec wrangler deploy`.
+Deploys happen automatically via `.github/workflows/deploy.yml`. On push to
+`main`, the workflow installs deps with `--frozen-lockfile`, runs
+`pnpm build`, and then `pnpm exec wrangler deploy`. On pull requests, it
+uploads a preview version via `wrangler versions upload --preview-alias pr-<N>`
+and posts a sticky comment on the PR with the preview URL
+(`https://pr-<N>-personal-site.<subdomain>.workers.dev`). The preview alias
+is overwritten by each new commit to the PR, so the link always serves the
+latest build.
 
 Required GitHub Actions repository secrets:
 
