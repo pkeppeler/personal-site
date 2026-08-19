@@ -5,6 +5,10 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
+    # Wait 7 days after a release before opening a PR. Defends against
+    # typosquatting and malicious-then-yanked packages.
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     # Group minor and patch bumps into a single PR per week.
     # Major bumps get their own PR for careful review.
@@ -21,3 +25,5 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
+    cooldown:
+      default-days: 7
