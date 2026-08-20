@@ -182,7 +182,7 @@ re-points a tag at malicious code.
 
 ### Node version
 
-- Pinned to Node 22.x via three mechanisms working together:
+- Pinned to Node 24.x via three mechanisms working together:
   - `engines.node` in `package.json` (enforced by `engine-strict=true`)
   - `.nvmrc` (for local version managers and CI)
   - `packageManager` field (pins pnpm version)
