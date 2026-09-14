@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.5",
+    "astro": "^7.3.1",
     "dompurify": "^3.4.0",
     "marked": "^18.0.1"
   },
