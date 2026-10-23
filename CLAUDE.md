@@ -112,17 +112,18 @@ Keep posts portable across markdown-based static site generators:
 
 ### Lifecycle scripts
 
-- `package.json` contains a `pnpm.onlyBuiltDependencies` allow-list. It
-  **starts empty** and stays as small as possible. Lifecycle scripts
-  (install/postinstall) are the most common supply-chain attack vector.
+- `pnpm-workspace.yaml` holds the `allowBuilds` map (pnpm 11+). Every
+  dependency with a build script gets an explicit `true` or `false`, and the
+  install fails (`ERR_PNPM_IGNORED_BUILDS`) on any it does not list. Keep the
+  `true` entries as few as possible. Lifecycle scripts (install/postinstall)
+  are the most common supply-chain attack vector.
 - If an install fails because a package wants to run scripts, investigate
-  before adding it to the allow-list:
+  before allowing it:
   1. Check what the script does (read the package source).
-  2. Check if there's a way to use the package without the script.
-  3. Only add to `onlyBuiltDependencies` if the script is necessary and
-     understood.
-- When you add a package to the allow-list, add a brief comment in a
-  commit message or nearby explaining why it's necessary.
+  2. Check if there's a way to use the package without the script; if so,
+     set it to `false`.
+  3. Only set it to `true` if the script is necessary and understood.
+- Every entry carries a brief comment next to it explaining the decision.
 
 ### Dependency updates
 

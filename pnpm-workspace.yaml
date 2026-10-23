@@ -1,0 +1,11 @@
+# Dependency lifecycle scripts. pnpm 11+ fails the install on any dependency
+# that has a build script and no explicit decision here (strictDepBuilds).
+# Keep the allow-list minimal; see CLAUDE.md "Lifecycle scripts".
+allowBuilds:
+  # Needed: fetches/links the native libvips binaries.
+  sharp: true
+  # Not needed: esbuild and workerd ship their binaries as optional
+  # platform packages; their scripts are only a fallback/validation step.
+  # They were silently skipped under pnpm 10 and the build worked.
+  esbuild: false
+  workerd: false
