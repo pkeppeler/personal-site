@@ -1,3 +1,5 @@
 [default.extend-words]
+# "enumerables": plural noun (programming jargon) in PLAN.md
+enumerables = "enumerables"
 # "PNGs" splits into "PN" + "Gs"
 PN = "PN"
