@@ -132,9 +132,9 @@ Keep posts portable across markdown-based static site generators:
 - **Renovate automerges non-major updates.** Minor, patch, pin and digest
   updates, lockfile maintenance, and non-major security fixes merge once
   the required CI checks pass. Renovate merges through its bypass on the
-  `reviews` ruleset; `ci-and-history` still binds it. This is deliberate:
+  `reviews` ruleset; `ci-and-history` still binds it. Before changing this,
   read [dotfiles ADR 0020](https://github.com/pkeppeler/dotfiles/blob/main/docs/adr/0020-renovate-automerges-non-major-through-a-reviews-bypass.md)
-  (private repo; read it with `gh`) before changing it.
+  (private repo; use `gh`).
 - **Majors wait for a human review**, security majors included. Each
   major bump gets its own PR.
 - When reviewing a major Renovate PR: read the changelogs of bumped packages,
@@ -181,10 +181,9 @@ actually use them, not the day you think you might.
 
 **Pinning and review.** npm: lockfile (`pnpm-lock.yaml`) is committed;
 review diffs for unexpected transitive dependencies on major bumps and
-your own changes (Renovate's non-major PRs rely on the required checks).
-GitHub Actions: non-`actions/*` actions must be pinned by full commit SHA
-with a version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Renovate's
-`github-actions` manager tracks and bumps the pins. This defeats
+your own changes. GitHub Actions: non-`actions/*` actions must be pinned
+by full commit SHA with a version-tag comment (`uses: foo/bar@<sha> # v1.2.3`);
+Renovate's `github-actions` manager tracks and bumps the pins. This defeats
 the tj-actions/changed-files class of attack where a maintainer
 re-points a tag at malicious code.
 
