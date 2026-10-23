@@ -82,4 +82,40 @@ const longDateFmt: Intl.DateTimeFormatOptions = {
       )
     )}
   </nav>
+
+  <script>
+    // Progressive enhancement: buttons exist only when JS runs.
+    for (const code of document.querySelectorAll<HTMLElement>('article pre > code')) {
+      const pre = code.parentElement!;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'copy-button';
+      button.textContent = 'copy';
+      button.setAttribute('aria-label', 'Copy prompt');
+      const status = document.createElement('span');
+      status.className = 'copy-status';
+      status.setAttribute('aria-live', 'polite');
+      let timer: number | undefined;
+      const flash = (label: string, announce: string) => {
+        button.textContent = label;
+        status.textContent = announce;
+        clearTimeout(timer);
+        timer = window.setTimeout(() => {
+          button.textContent = 'copy';
+          status.textContent = '';
+        }, 2000);
+      };
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(code.textContent ?? '');
+          flash('copied', 'copied');
+        } catch {
+          getSelection()?.selectAllChildren(code);
+          flash('selected', 'Prompt selected');
+        }
+      });
+      pre.classList.add('has-copy');
+      pre.append(button, status);
+    }
+  </script>
 </BaseLayout>
