@@ -11,6 +11,8 @@ By the end of this episode you have a Claude account on a plan worth paying for,
 
 Where things live in the app is stated as of the day I wrote this, and the app moves. So every menu path in this episode carries the same fallback: if it is not there, the app has moved it; ask Claude "where do I find X now?"
 
+Most of those paths start in Settings, which opens a sidebar. When I wrote this, its first group read General, Account, Privacy, Billing, Usage, Capabilities, Memory, and a few more below those. The paths below name those entries.
+
 ## Create an account
 
 Go to claude.ai in a browser, or install the Claude app on iOS or Android. Sign in with your email address (Claude emails you a login link; open it and you are in) or with Google. Either works; pick one and use it everywhere. The account is the thing, not the device, and signing in the same way on your phone and your laptop keeps you in one account rather than two. Two is how you end up with half your work in each. If the sign-in screen does not match this description, [Anthropic's login article](https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account) has the current steps; you have no Claude to ask yet, so the article stands in for the fallback this once.
@@ -61,17 +63,23 @@ The baseline:
 
 2. Model: "Opus 5.5" on every paid plan. If the picker shows "Fable 5.1", "Fable 5", any Sonnet or Haiku, or an older Opus, switch it to "Opus 5.5". If I stay on Free, tell me Opus is not available on Free, ask which models the picker offers, and pick the newest Sonnet.
 
-3. Web search: have me click the "+" button at the lower left of the chat box. If a "Web search" item is in that menu, it is checked in this chat. Then have me open a second new chat, look at the same menu, and come back here to report whether it is still checked. Record the answer; if it did not stay on, tell me web search is per chat and I turn it on each time. If there is no "Web search" item, there is no toggle: Claude searches on its own when it helps, so just confirm that and move on.
+3. Web search: have me click the "+" button at the lower left of the chat box. If a "Web search" item is in that menu, it is checked in this chat. Then have me open a second new chat, look at the same menu, and come back here to report whether it is still checked. Record the answer; if it did not stay on, tell me web search is per chat and I turn it on each time. If there is no "Web search" item, there is no toggle: Claude searches on its own when it helps, so just confirm that and move on. Then run one quick test search yourself, on something only a live search can answer: find the newest entry in Anthropic's release notes (https://support.claude.com/en/articles/12138966-release-notes), tell me its title and date, and say whether the search worked. If it did not work, walk me back through this step until it does.
 
-4. "Settings > Capabilities": "Code execution and file creation" on. Under it, "Allow network egress" on.
+4. "Settings > Capabilities": "Code execution and file creation" on. Under it, network access set to "package managers only", which lets the file-building environment install what it needs and nothing wider. The exact option labels can differ by plan; if my plan shows only an on and off switch there (it may be labeled "Allow network egress"), have me turn it on. "All domains" gives Claude's code full internet access; Anthropic calls it the riskiest option, because a hijacked instruction could make Claude leak my data or run untrusted code. If I want it, tell me that once, then let me choose and record the choice. Also tell me that web search and research work whatever this setting says.
 
-5. "Settings > Memory": "Generate memory from chats" on. "Search and reference chats" on if my plan is paid, skipped on Free. "Include sensitive topics in memory": explain in one line that without it, things like health and beliefs are kept out of memory, then leave the choice to me and record it. On older accounts the same toggles sit under "Settings > Capabilities" with older wording; treat them as the same settings. Mention once that the ghost icon on a new chat starts an incognito chat that Claude does not remember.
+5. "Settings > Capabilities": "Tool access mode" set to "Load tools when needed". It keeps conversations lighter, and Claude loads a connector's tools when it needs them. It applies to new conversations.
 
-6. "Settings > Usage": usage credits off: not enabled, or if already enabled, auto-reload switched off so nothing more is charged. Opus 5.5 runs inside the plan's limits, so nothing in this baseline needs credits.
+6. "Settings > Capabilities": "Connector search" on. Claude can then suggest connected apps relevant to what I am doing.
 
-7. "Instructions for Claude" in Settings (if it is not directly under Settings, look under "Settings > General"): written. If it is empty or stale, offer to draft it from three questions (what I do, what I use Claude for, how I like answers), asked one at a time, then have me paste it in and confirm.
+7. Permission mode: it sits in the message box next to the model and effort pickers, for example "Opus 5.5 · High · Auto". It should read Auto. Auto means Claude acts on its own while a safety check reviews each action and blocks ones that look like data theft or hijacked instructions; Claude then tries a safer way or asks me. Manual means Claude asks before each action. If it shows Manual, have me switch it to Auto. Do not tell me what the default is. Tell me Anthropic's own exceptions: switch to Manual for money, messages sent as me, sensitive accounts, or a tool or site I use for the first time. Also tell me that Claude always asks before permanently deleting anything. If I cannot find the control on my device, mark it skipped.
 
-8. Two things to explain, not change. First, the "Effort" setting in the model menu: what it does (how hard the model works on each answer), and that each model has a recommended level marked "Default", where it stays. Second, "Research" in the "+" menu: what it does (a deeper, multi-source investigation that reports back), that it needs a paid plan, that it needs "Web search" on, that where the "+" menu has no "Research" item it starts with the command /deep-research, and when to reach for it. Have me open each menu and say what I see, so I know where they live, then move on.
+8. "Settings > Memory": "Generate memory from chats" on. "Search and reference chats" on if my plan is paid, skipped on Free. "Include sensitive topics in memory": explain in one line that without it, things like health and beliefs are kept out of memory, then leave the choice to me and record it. On older accounts the same toggles sit under "Settings > Capabilities" with older wording; treat them as the same settings. Mention once that the ghost icon on a new chat starts an incognito chat that Claude does not remember.
+
+9. "Settings > Usage": usage credits off: not enabled, or if already enabled, auto-reload switched off so nothing more is charged. Opus 5.5 runs inside the plan's limits, so nothing in this baseline needs credits.
+
+10. "Instructions for Claude" in "Settings > Account" (if it is not there, look under "Settings > General"): written. If it is empty or stale, offer to draft it from three questions (what I do, what I use Claude for, how I like answers), asked one at a time, then have me paste it in and confirm.
+
+11. Two things to explain, not change. First, the "Effort" setting in the model menu: what it does (how hard the model works on each answer), and that each model has a recommended level marked "Default", where it stays. Second, "Research" in the "+" menu: what it does (a deeper, multi-source investigation that reports back), that it needs a paid plan, that it needs "Web search" on, that where the "+" menu has no "Research" item it starts with the command /deep-research, and when to reach for it. Have me open each menu and say what I see, so I know where they live, then move on.
 
 When every item is done, give me a summary table with one row per setting: setting, before, after, or skipped with the reason, or explained for Effort and Research. Then end with exactly this line: "You can paste this prompt into a new chat any time to check everything again."
 ```
@@ -88,7 +96,13 @@ On its own, Claude knows what it learned in training, which stops at a date (Jun
 
 ### Capabilities
 
-"Code execution and file creation" is what lets Claude hand you a real file, a formatted document or a spreadsheet you can download, instead of text in the chat window. Under it, "Allow network egress" is an on and off switch, on by default, that lets the environment that builds those files install the packages it needs from approved sources. On a work plan you may see wider options than on and off; leave those to whoever administers the plan. Both are under [Settings > Capabilities](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude) (if it is not there, the app has moved it; ask Claude "where do I find Capabilities now?").
+"Code execution and file creation" is what lets Claude hand you a real file, a formatted document or a spreadsheet you can download, instead of text in the chat window. Under it sits a network access control for the environment that builds those files, and I set it to "package managers only": Claude's code can install what it needs from package managers and reach nothing wider. The option labels vary by plan; where your plan shows only an on and off switch (documented as "Allow network egress"), turn it on. "All domains" gives Claude's code full internet access. [Anthropic calls it the riskiest option](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude), because a hijacked instruction could make Claude leak your data or run untrusted code. You may pick it knowingly. None of this affects web search or research, which work regardless of this setting.
+
+Two more settings sit on the same page. "Tool access mode" I set to "Load tools when needed": it keeps conversations lighter, and Claude loads a connector's tools when it needs them. It applies to new conversations. "Connector search" I leave on: Claude can then suggest connected apps relevant to what you are doing. All of it is under Settings > Capabilities (if it is not there, the app has moved it; ask Claude "where do I find Capabilities now?").
+
+### Permission mode
+
+In the message box, next to the model and effort pickers, sits one more control, for example "Opus 5.5 · High · Auto" (if it is not there, the app has moved it; ask Claude "where do I find the permission mode now?"). It decides how much Claude asks before it acts. In Auto, Claude works on its own while a safety check reviews each action and blocks ones that look like data theft or hijacked instructions; it then tries a safer way or asks you. In Manual, Claude asks before each action. I recommend Auto. Check that yours shows Auto rather than assuming it does: Anthropic's own pages disagree about which one new accounts start on. [Anthropic's own exceptions](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely) are worth keeping: switch to Manual for money, messages sent as you, sensitive accounts, or a tool or site you use for the first time. Whatever the mode, Claude always asks before permanently deleting anything.
 
 ### Memory
 
@@ -108,7 +122,7 @@ Two things the audit explains and leaves alone. Effort is in the model menu next
 
 ## Instructions for Claude
 
-Under Settings there is a text field called ["Instructions for Claude"](https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features); in the newer layout it sits under Settings > General (if it is not there, the app has moved it; ask Claude "where do I find Instructions for Claude now?"). Whatever you write there applies to every chat you start. That makes it the wrong place for your life story and the right place for how you want Claude to behave: who you are in a line, what you mostly use it for, and how you like your answers. A paragraph is plenty.
+Under Settings > Account there is a text field called ["Instructions for Claude"](https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features); Anthropic's help page puts it under Settings > General in the newer layout, so look there if it is not in Account (if it is in neither, the app has moved it; ask Claude "where do I find Instructions for Claude now?"). Whatever you write there applies to every chat you start. That makes it the wrong place for your life story and the right place for how you want Claude to behave: who you are in a line, what you mostly use it for, and how you like your answers. A paragraph is plenty.
 
 A template to adapt:
 
@@ -137,12 +151,15 @@ Locations are as of the day I wrote this. If one is not there, the app has moved
 
 - [ ] Plan is Pro at minimum, Max if you keep hitting limits (Settings > Billing)
 - [ ] Model is Opus 5.5 on any paid plan; never Fable, Sonnet, or Haiku (model menu next to the send button)
-- [ ] Web search works: checked if the "+" menu has a Web search item (and you know whether it stays on in a new chat), nothing to toggle if it does not (the "+" menu, lower left of the chat box)
+- [ ] Web search works: checked if the "+" menu has a Web search item (and you know whether it stays on in a new chat), nothing to toggle if it does not, and Claude's test search of the release notes succeeded (the "+" menu, lower left of the chat box)
 - [ ] Code execution and file creation is on (Settings > Capabilities)
-- [ ] Allow network egress is on (Settings > Capabilities, under code execution)
+- [ ] Network access is "package managers only", or on if your plan shows only a switch (Settings > Capabilities, under code execution)
+- [ ] Tool access mode is "Load tools when needed" (Settings > Capabilities)
+- [ ] Connector search is on (Settings > Capabilities)
+- [ ] Permission mode shows Auto (message box, next to the model and effort pickers)
 - [ ] Generate memory from chats is on (Settings > Memory; Settings > Capabilities on older accounts)
 - [ ] Search and reference chats is on (Settings > Memory)
 - [ ] Include sensitive topics in memory is decided, either way (Settings > Memory)
 - [ ] Usage credits are off, or auto-reload is off (Settings > Usage)
-- [ ] Instructions for Claude is written (Settings; Settings > General in the newer layout)
+- [ ] Instructions for Claude is written (Settings > Account; Settings > General in the newer layout)
 - [ ] Effort left at Default, and you know where Research lives (model menu; the "+" menu, or /deep-research where it has no Research item)
