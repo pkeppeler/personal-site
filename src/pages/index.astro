@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import BelisarMark from '../assets/logos/belisar.svg';
+import VannevarMark from '../assets/logos/vannevar.svg';
+import PalantirMark from '../assets/logos/palantir.svg';
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -21,9 +24,9 @@ const dateFmt: Intl.DateTimeFormatOptions = {
     <h1>Peter Keppeler</h1>
     <p>
       Backend and infrastructure engineer. Currently at
-      <a href="https://www.pryzm.io/">Pryzm</a>. Previously
-      <a href="https://www.vannevarlabs.com">Vannevar Labs</a> and
-      <a href="https://www.palantir.com">Palantir</a>.
+      <a class="company" href="https://belisar.com/"><BelisarMark aria-hidden="true" focusable="false" />Belisar</a>. Previously
+      <a class="company" href="https://www.vannevarlabs.com"><VannevarMark aria-hidden="true" focusable="false" />Vannevar</a> and
+      <a class="company" href="https://www.palantir.com"><PalantirMark aria-hidden="true" focusable="false" />Palantir</a>.
     </p>
     <p>
       <a href="https://github.com/pkeppeler">github</a> &middot;

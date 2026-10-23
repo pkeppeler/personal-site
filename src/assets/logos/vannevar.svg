@@ -1,0 +1,2 @@
+<!-- Source: https://cdn.sanity.io/images/abg9337x/production/3ee675468490df78bc244b2552114479443a4a2c-16x16.svg (favicon on https://www.vannevarlabs.com/); frame is the original 16x16 square minus the 2.5-13.5 inner square, background dropped -->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h16v16H0zM2.5 2.5v11h11v-11z" fill="currentColor" fill-rule="evenodd"/><path d="M3.434 3.038 7.285 13.5H2.5V3.038zM13.5 13.5H8.845l3.41-10.477H13.4V2.5h.1zM9.871 3.023h1.32l-2.766 7.935h-.096l-2.892-7.92 1.08-.015V2.5h3.354z" fill="currentColor"/></svg>
