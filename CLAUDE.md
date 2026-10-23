@@ -28,12 +28,11 @@ maintenance. Readable on a slow connection.
 
 ### Zero client-side JavaScript by default
 
-The output of `pnpm build` should contain **no `<script>` tags** on any page
-except two: the Markdown Viewer at `/tools/viewer/` (a bundled script plus the
-PWA `registerSW.js`) and guide episode pages (a bundled script for the prompt
-copy button only). Every other page ships no `<script>` without owner
-sign-off. If you add a `<script>` to the base layout, you're doing the wrong
-thing. This is a text site; the browser's job is to render HTML and stop.
+Pages ship no `<script>` except the Markdown Viewer at `/tools/viewer/` and
+guide episode pages (the prompt copy button). `scripts/check-no-scripts.mjs`
+enforces this: `pnpm build` runs it after `astro build`, locally and in CI, and
+fails naming the page. Extending the allowlist needs owner sign-off. This is a
+text site; the browser's job is to render HTML and stop.
 
 ### No themes, no CSS frameworks
 
