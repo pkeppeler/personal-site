@@ -67,7 +67,7 @@ Grilling is Matt Pocock's technique, not mine. It is a skill (a saved set of ins
 
 **When to reach for it.** Before anything where a wrong assumption is expensive or where you do not know what you do not know: a decision with many parts, a plan you suspect has holes, a project you are about to set up. Not for a quick question; a numbered round is a heavy answer to a light need.
 
-Here is the file, exactly as Matt published it on [7 October 2026](https://github.com/mattpocock/skills/commit/95249b0b49782349740fd9b8c6ce32b4e59e497a). It is written for Claude to follow, so it sounds like instructions to a colleague. I have not changed a word, so paste it as it is.
+Here is the file, exactly as it stood on [7 October 2026](https://github.com/mattpocock/skills/commit/95249b0b49782349740fd9b8c6ce32b4e59e497a). It is written for Claude to follow, so it sounds like instructions to a colleague. I have not changed a word, so paste it as it is.
 
 ````text
 ---
@@ -208,7 +208,7 @@ Answer it messily; a rough answer gets a sharper next question. Read what comes 
 
 **What it holds.** The plan a doctor or coach has given you, your goals, your logs and the baseline you work from. Claude's job is to help you understand what they tell you, keep the records in order and prepare questions for the next appointment; the decisions stay with them. That keeps the project on the safe side of the subject, and it covers most of what you need between appointments.
 
-**Memory will not carry it.** Claude's memory leaves out health and other sensitive topics unless you turn on "Include sensitive topics in memory" (Settings > Memory, covered in [Episode 1](/guides/claude/1-set-up-your-account/)), so in a health project the file does the remembering. The project's own memory is different: with memory on, it can show up in chats outside the project. For a health project, turn off "Use account memory" on the project's page; Anthropic says that keeps the project's memory "fully separate", though it does not say exactly what that covers.
+**Memory will not carry it.** Claude's memory leaves out health and other sensitive topics unless you turn on "Include sensitive topics in memory" (Settings > Memory, covered in [Episode 1](/guides/claude/1-set-up-your-account/)), so in a health project the file does the remembering. The project also has its own memory, and with memory on, it can show up in chats outside the project. For a health project, turn off "Use account memory" on the project's page; Anthropic says that keeps the project's memory "fully separate", though it does not say exactly what that covers.
 
 **The instructions.** Mine was a role, principles and a stop-list, with no rules for its files. I had four files, replaced by hand. Nothing in those instructions said which version wins when the file and the chat disagree, and in my other projects that gap is exactly where drift crept in. The six living-file rules close it; here is the shape, short, with them added:
 
