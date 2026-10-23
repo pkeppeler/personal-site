@@ -104,7 +104,8 @@ Keep posts portable across markdown-based static site generators:
   uses [`pnpm/action-setup`](https://github.com/pnpm/action-setup), which
   reads the same field. Both paths land on exactly the pinned version.
 - **Lockfile (`pnpm-lock.yaml`) is committed** and is the source of truth.
-  Review lockfile diffs in PRs — large unexplained changes are a red flag.
+  Review lockfile diffs in PRs that wait for a human (majors, your own
+  changes) — large unexplained changes are a red flag.
 - **Always install with `pnpm install --frozen-lockfile`** locally and in CI.
   Never use plain `pnpm install` in automated contexts. Plain `pnpm install`
   is only acceptable when deliberately adding or updating a dependency.
@@ -133,10 +134,10 @@ Keep posts portable across markdown-based static site generators:
   the required CI checks pass. Renovate merges through its bypass on the
   `reviews` ruleset; `ci-and-history` still binds it. This is deliberate:
   read [dotfiles ADR 0020](https://github.com/pkeppeler/dotfiles/blob/main/docs/adr/0020-renovate-automerges-non-major-through-a-reviews-bypass.md)
-  before changing it.
+  (private repo; read it with `gh`) before changing it.
 - **Majors wait for a human review**, security majors included. Each
   major bump gets its own PR.
-- When reviewing a Renovate PR: read the changelogs of bumped packages,
+- When reviewing a major Renovate PR: read the changelogs of bumped packages,
   skim the lockfile diff for anything unexpected (new transitive deps,
   packages from unfamiliar authors), and run `pnpm build` locally before
   merging.
@@ -179,9 +180,10 @@ Do not install anything "for later." Add dependencies the day you
 actually use them, not the day you think you might.
 
 **Pinning and review.** npm: lockfile (`pnpm-lock.yaml`) is committed;
-review diffs for unexpected transitive dependencies. GitHub Actions:
-non-`actions/*` actions must be pinned by full commit SHA with a
-version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Renovate's
+review diffs for unexpected transitive dependencies on major bumps and
+your own changes (Renovate's non-major PRs rely on the required checks).
+GitHub Actions: non-`actions/*` actions must be pinned by full commit SHA
+with a version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Renovate's
 `github-actions` manager tracks and bumps the pins. This defeats
 the tj-actions/changed-files class of attack where a maintainer
 re-points a tag at malicious code.
