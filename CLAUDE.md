@@ -104,7 +104,8 @@ Keep posts portable across markdown-based static site generators:
   uses [`pnpm/action-setup`](https://github.com/pnpm/action-setup), which
   reads the same field. Both paths land on exactly the pinned version.
 - **Lockfile (`pnpm-lock.yaml`) is committed** and is the source of truth.
-  Review lockfile diffs in PRs — large unexplained changes are a red flag.
+  Review lockfile diffs in PRs that wait for a human (majors, your own
+  changes) — large unexplained changes are a red flag.
 - **Always install with `pnpm install --frozen-lockfile`** locally and in CI.
   Never use plain `pnpm install` in automated contexts. Plain `pnpm install`
   is only acceptable when deliberately adding or updating a dependency.
@@ -128,14 +129,18 @@ Keep posts portable across markdown-based static site generators:
 - **Renovate opens grouped PRs** (see `renovate.json`; policy lives in the
   shared `pkeppeler/renovate` preset). Minor and patch updates arrive in one
   PR, and lockfile maintenance runs weekly.
-- **No auto-merge. Ever.** Every dependency update is reviewed by a human,
-  including patch bumps. The point of having Renovate is to surface
-  updates, not to automate merging.
-- When reviewing a Renovate PR: read the changelogs of bumped packages,
+- **Renovate automerges non-major updates.** Minor, patch, pin and digest
+  updates, lockfile maintenance, and non-major security fixes merge once
+  the required CI checks pass. Renovate merges through its bypass on the
+  `reviews` ruleset; `ci-and-history` still binds it. Before changing this,
+  read [dotfiles ADR 0020](https://github.com/pkeppeler/dotfiles/blob/main/docs/adr/0020-renovate-automerges-non-major-through-a-reviews-bypass.md)
+  (private repo; use `gh`).
+- **Majors wait for a human review**, security majors included. Each
+  major bump gets its own PR.
+- When reviewing a major Renovate PR: read the changelogs of bumped packages,
   skim the lockfile diff for anything unexpected (new transitive deps,
   packages from unfamiliar authors), and run `pnpm build` locally before
   merging.
-- Major version bumps get their own PR and careful review.
 
 ### Deliberate dependencies
 
@@ -175,10 +180,10 @@ Do not install anything "for later." Add dependencies the day you
 actually use them, not the day you think you might.
 
 **Pinning and review.** npm: lockfile (`pnpm-lock.yaml`) is committed;
-review diffs for unexpected transitive dependencies. GitHub Actions:
-non-`actions/*` actions must be pinned by full commit SHA with a
-version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Renovate's
-`github-actions` manager tracks and bumps the pins. This defeats
+review diffs for unexpected transitive dependencies on major bumps and
+your own changes. GitHub Actions: non-`actions/*` actions must be pinned
+by full commit SHA with a version-tag comment (`uses: foo/bar@<sha> # v1.2.3`);
+Renovate's `github-actions` manager tracks and bumps the pins. This defeats
 the tj-actions/changed-files class of attack where a maintainer
 re-points a tag at malicious code.
 
