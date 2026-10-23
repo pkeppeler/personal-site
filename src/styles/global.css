@@ -206,6 +206,17 @@ article img {
   height: auto;
 }
 
+.company {
+  white-space: nowrap;
+}
+
+.company svg {
+  height: 0.9em;
+  width: auto;
+  margin-right: 0.3em;
+  vertical-align: baseline;
+}
+
 @media (max-width: 36rem) {
   body {
     padding: 1.5rem 1rem 2rem;
