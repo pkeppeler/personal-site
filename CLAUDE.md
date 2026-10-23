@@ -29,10 +29,11 @@ maintenance. Readable on a slow connection.
 ### Zero client-side JavaScript by default
 
 The output of `pnpm build` should contain **no `<script>` tags** on any page
-unless a specific page explicitly opts in to an interactive React island (and
-there are none right now). If you add a `<script>` to the base layout, you're
-doing the wrong thing. This is a text site; the browser's job is to render
-HTML and stop.
+except two: the Markdown Viewer at `/tools/viewer/` (a bundled script plus the
+PWA `registerSW.js`) and guide episode pages (a bundled script for the prompt
+copy button only). Every other page ships no `<script>` without owner
+sign-off. If you add a `<script>` to the base layout, you're doing the wrong
+thing. This is a text site; the browser's job is to render HTML and stop.
 
 ### No themes, no CSS frameworks
 
