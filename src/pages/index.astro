@@ -4,15 +4,19 @@ import { getCollection } from 'astro:content';
 import BelisarMark from '../assets/logos/belisar.svg';
 import VannevarMark from '../assets/logos/vannevar.svg';
 import PalantirMark from '../assets/logos/palantir.svg';
+import { getSeries } from '../lib/guides';
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 5);
 
+const { hub } = await getSeries();
+
 const dateFmt: Intl.DateTimeFormatOptions = {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
+  timeZone: 'UTC',
 };
 ---
 
@@ -37,10 +41,11 @@ const dateFmt: Intl.DateTimeFormatOptions = {
   <section>
     <h2>about this site</h2>
     <p>
-      A place to learn in public, document personal projects, and publish
-      small standalone tools. I build and write here with Claude as a
-      development partner &mdash; code and most posts are drafted with AI,
-      then edited and verified by me. <a href="/about/">More on the about page.</a>
+      A place to learn in public: writing about personal projects, small
+      standalone tools, and guides for friends and family, starting with a
+      series on getting good at Claude. I build and write here with Claude as
+      a development partner. Code and most of the writing are drafted with
+      AI, then edited and verified by me. <a href="/about/">More on the about page.</a>
     </p>
   </section>
 
@@ -61,6 +66,15 @@ const dateFmt: Intl.DateTimeFormatOptions = {
       </ul>
     )}
     <p><a href="/posts/">all posts &rarr;</a></p>
+  </section>
+
+  <section>
+    <h2>guides</h2>
+    <ul>
+      <li>
+        <a href="/guides/claude/">{hub.data.title}</a> &mdash; {hub.data.description}
+      </li>
+    </ul>
   </section>
 
   <section>

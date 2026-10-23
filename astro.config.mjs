@@ -10,6 +10,9 @@ export default defineConfig({
   // Astro 7 defaults to 'jsx' whitespace handling, which drops the space
   // between inline text and elements ("Currently at<a>"). Keep v6 behavior.
   compressHTML: true,
+  redirects: {
+    '/guides': '/guides/claude/',
+  },
   integrations: [
     sitemap(),
     AstroPWA({

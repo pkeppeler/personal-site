@@ -2,9 +2,10 @@
 interface Props {
   authorship: 'human' | 'ai-drafted';
   expandable?: boolean;
+  explainer?: 'post' | 'guide';
 }
 
-const { authorship, expandable = false } = Astro.props;
+const { authorship, expandable = false, explainer = 'post' } = Astro.props;
 const label = authorship === 'human' ? 'human written' : 'ai drafted';
 const variant = authorship === 'human' ? 'human' : 'ai';
 ---
@@ -17,6 +18,14 @@ const variant = authorship === 'human' ? 'human' : 'ai';
         I wrote this one myself, start to finish. Claude may have caught
         typos or suggested small edits, but the prose, structure, and
         argument are mine.
+      </p>
+    ) : explainer === 'guide' ? (
+      <p>
+        This series was designed in a grilling session between me and
+        Claude, then drafted by Claude to that spec with every fact checked
+        against the official pages of the product or agency it concerns,
+        then edited and verified by me. The claims and opinions are mine;
+        the initial prose is Claude's.
       </p>
     ) : (
       <p>

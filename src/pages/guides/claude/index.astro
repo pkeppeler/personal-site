@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import { render } from 'astro:content';
+import { getSeries, freshness, SERIES_FEED_PATH } from '../../../lib/guides';
+
+const { hub, episodes } = await getSeries();
+const { Content } = await render(hub);
+
+const longDateFmt: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+
+const shortDateFmt: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+---
+
+<BaseLayout
+  title={`${hub.data.title} — Peter Keppeler`}
+  description={hub.data.description}
+  ogType="article"
+  publishedDate={hub.data.pubDate}
+>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title={hub.data.title}
+    href={SERIES_FEED_PATH}
+  />
+  <article>
+    <header>
+      <h1>{hub.data.title}</h1>
+      <time datetime={freshness(hub).toISOString()}>
+        updated {freshness(hub).toLocaleDateString('en-US', longDateFmt)}
+      </time>
+      <AuthorshipBadge authorship={hub.data.authorship} expandable={true} explainer="guide" />
+    </header>
+    <Content />
+  </article>
+
+  <h2>episodes</h2>
+  <ol class="episodes" start="0">
+    {episodes.map((episode) => (
+      <li>
+        {episode.number === 0 ? (
+          <p><strong>Start here</strong> (this page)</p>
+        ) : episode.published ? (
+          <p>
+            <a href={episode.path}>{episode.entry.data.title}</a>{' '}
+            <time datetime={freshness(episode.entry).toISOString()}>
+              updated {freshness(episode.entry).toLocaleDateString('en-US', shortDateFmt)}
+            </time>
+          </p>
+        ) : (
+          <p><span class="coming-soon">{episode.entry.data.title} (coming soon)</span></p>
+        )}
+        <p>{episode.entry.data.description}</p>
+      </li>
+    ))}
+  </ol>
+</BaseLayout>
