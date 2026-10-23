@@ -1,0 +1,3 @@
+[default.extend-words]
+# "PNGs" splits into "PN" + "Gs"
+PN = "PN"
