@@ -7,6 +7,9 @@ import AstroPWA from '@vite-pwa/astro';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pkepps.com',
+  // Astro 7 defaults to 'jsx' whitespace handling, which drops the space
+  // between inline text and elements ("Currently at<a>"). Keep v6 behavior.
+  compressHTML: true,
   integrations: [
     sitemap(),
     AstroPWA({

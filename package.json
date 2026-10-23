@@ -12,16 +12,16 @@
     "icons": "node scripts/generate-tool-icons.mjs"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.5",
-    "dompurify": "^3.4.0",
-    "marked": "^18.0.1"
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.0",
+    "dompurify": "^3.4.17",
+    "marked": "^18.1.1"
   },
   "engines": {
     "node": ">=24.0.0 <25.0.0"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.34.7",
   "pnpm": {
     "onlyBuiltDependencies": [
       "sharp"
@@ -29,9 +29,10 @@
   },
   "devDependencies": {
     "@vite-pwa/astro": "^1.2.0",
-    "sharp": "^0.34.5",
-    "vite-plugin-pwa": "^1.2.0",
-    "workbox-window": "^7.4.0",
-    "wrangler": "^4.83.0"
+    "sharp": "^0.35.5",
+    "vite-plugin-pwa": "^2.0.0",
+    "workbox-build": "^7.4.1",
+    "workbox-window": "^7.4.1",
+    "wrangler": "^4.151.0"
   }
 }
