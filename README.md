@@ -121,10 +121,10 @@ it. Drafts are hidden from the index, individual pages, and the RSS feed.
 │   └── styles/
 │       └── global.css       # The only CSS file
 ├── .github/
-│   ├── dependabot.yml       # Weekly grouped dependency updates
 │   └── workflows/
 │       └── deploy.yml       # Build + deploy to Cloudflare Workers on push to main
 ├── .nvmrc                   # Node version pin
+├── renovate.json            # Dependency updates (extends the shared Renovate preset)
 ├── .npmrc                   # engine-strict enforcement
 ├── package.json             # Deps, scripts, Node + pnpm version pins
 ├── pnpm-lock.yaml           # Committed, frozen lockfile
@@ -188,7 +188,7 @@ See `CLAUDE.md` for the full list of project constraints. Short version:
 - Node 24.x pinned via `engines` + `.nvmrc` + `engine-strict=true`.
 - pnpm version pinned via `packageManager` field (Corepack locally,
   `pnpm/action-setup` in CI).
-- Dependabot opens weekly grouped PRs. **No auto-merge.** Review lockfile
+- Renovate opens grouped dependency PRs. **No auto-merge.** Review lockfile
   diffs before merging.
 - Minimum dependencies. Prefer official `@astrojs/*` integrations over
   third-party.

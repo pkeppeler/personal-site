@@ -125,11 +125,13 @@ Keep posts portable across markdown-based static site generators:
 
 ### Dependency updates
 
-- **Dependabot opens weekly grouped PRs** (see `.github/dependabot.yml`).
+- **Renovate opens grouped PRs** (see `renovate.json`; policy lives in the
+  shared `pkeppeler/renovate` preset). Minor and patch updates arrive in one
+  PR, and lockfile maintenance runs weekly.
 - **No auto-merge. Ever.** Every dependency update is reviewed by a human,
-  including patch bumps. The point of having Dependabot is to surface
+  including patch bumps. The point of having Renovate is to surface
   updates, not to automate merging.
-- When reviewing a Dependabot PR: read the changelogs of bumped packages,
+- When reviewing a Renovate PR: read the changelogs of bumped packages,
   skim the lockfile diff for anything unexpected (new transitive deps,
   packages from unfamiliar authors), and run `pnpm build` locally before
   merging.
@@ -175,8 +177,8 @@ actually use them, not the day you think you might.
 **Pinning and review.** npm: lockfile (`pnpm-lock.yaml`) is committed;
 review diffs for unexpected transitive dependencies. GitHub Actions:
 non-`actions/*` actions must be pinned by full commit SHA with a
-version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Dependabot's
-`github-actions` ecosystem tracks and bumps the pins. This defeats
+version-tag comment (`uses: foo/bar@<sha> # v1.2.3`); Renovate's
+`github-actions` manager tracks and bumps the pins. This defeats
 the tj-actions/changed-files class of attack where a maintainer
 re-points a tag at malicious code.
 
