@@ -8,13 +8,13 @@ authorship: ai-drafted
 
 By the end of this episode you can tell when a piece of work deserves a project instead of a chat, and which of three shapes yours is. You also have one prompt that interviews you and hands back a ready-made project, and the grilling technique I teased in [Episode 0](/guides/claude/), in full, for making hard decisions with Claude.
 
-[Episode 1](/guides/claude/1-set-up-your-account/) is assumed: your account, your model and your Instructions for Claude are set. Settings from there get one line and a link, not a second walkthrough.
+[Episode 1](/guides/claude/1-set-up-your-account/) is assumed: your account, your model and your Instructions for Claude are set. Settings from there get one line and a link.
 
-Where things live in the app is stated as of the day I wrote this, and the app moves, so every menu path on this page carries one fallback, stated once here: if it is not there, the app has moved it; ask Claude "where do I find X now?" Projects in particular are in motion: Anthropic has a new version in beta, rolling out in stages, in which a project is one conversation and Claude breaks the work into parallel threads. Its help page says chat will follow, with no date. If your Projects look different from what I describe, the ideas carry over.
+Locations in the app are as of the day I wrote this, and the app moves, so one fallback covers every menu path on this page: if it is not there, the app has moved it; ask Claude "where do I find X now?" Projects in particular are in motion: Anthropic has a new version in beta, rolling out in stages, in which a project is one conversation and Claude breaks the work into parallel threads. Its help page says chat will follow, with no date. If your Projects look different from what I describe, the ideas carry over.
 
 ## A project holds what you would otherwise re-explain in every chat
 
-A chat is one conversation, and a new chat does not start from the last one. Memory ([Episode 1](/guides/claude/1-set-up-your-account/)) carries small things across, and on paid plans Claude can search your past chats when you ask, but the detail of what you decided last Tuesday is not in the new chat's head. So you re-explain. Every time I began a fresh chat about the same piece of work I typed the same paragraph: who I am, what I had decided, what I did not want.
+A chat is one conversation, and a new chat does not start from the last one. Memory ([Episode 1](/guides/claude/1-set-up-your-account/)) carries small things across, and on paid plans Claude can search your past chats when you ask, but the detail of what you decided last Tuesday is not in the new chat's head. So you re-explain. Every time I began a fresh chat on the same work I typed the same paragraph: who I am, what I had decided, what I did not want.
 
 A project is where that paragraph lives: a workspace around one body of work, with instructions that apply to every chat inside it (Anthropic's help page says Claude "will use these instructions for all the chats within the project"), files Claude can read, and the chats themselves, kept together.
 
@@ -26,7 +26,7 @@ To write this episode I asked Claude to summarize ten of my own projects and tel
 
 ### Living state: decisions pile up and have to stay settled
 
-My health project and my job search are this shape. The work is a picture that keeps changing: this month's program, where each application stands. Every durable project of this kind converged on one living file, a single document that holds the current picture and is replaced as it changes. Two things make a project beat a chat here. Decisions accumulate, and once I have settled one I do not want to argue it again in chat fourteen because Claude never heard of it. And the constraints are stable but non-obvious, like what a home gym can and cannot do. They are cheap to write down once and tiresome to explain forty times.
+My health project and my job search are this shape. The work is a picture that keeps changing: this month's program, where each application stands. Every durable project of this kind converged on one living file, a document that holds the current picture and is replaced as it changes. Two things make a project beat a chat here. Decisions accumulate, and once I have settled one I do not want to argue it again in chat fourteen because Claude never heard of it. And the constraints are stable but non-obvious, like what a home gym can and cannot do. They are cheap to write down once and tiresome to explain forty times.
 
 ### Reference library: upload once, ask many times
 
@@ -44,7 +44,7 @@ Not everything earns a project. What to cook for six on Saturday, how to word on
 
 Instructions are the text Claude reads at the start of every chat in the project. The mistake is writing a manual on day one. My four projects sit on a ladder, and the ladder is the advice:
 
-- **None.** Iceland had no instructions at all and still worked.
+- **None.** Iceland had no instructions and still worked.
 - **A preference list.** My job search: who I am, what I want and do not want, how I like to be helped. A page at most.
 - **A role, principles and anti-patterns.** Health: a role for Claude, operating principles, a rule to read the files before recommending anything, and a list of things to stop doing.
 - **An operating system.** My finances run on a full protocol for interviews, decisions and facts. The template two sections down is that protocol, shrunk.
@@ -65,7 +65,7 @@ Grilling is Matt Pocock's technique, not mine. It is a skill (a saved set of ins
 
 **When to reach for it.** Before anything where a wrong assumption is expensive or where you do not know what you do not know: a decision with many parts, a plan you suspect has holes, a project you are about to set up. Not for a quick question; a numbered round is a heavy answer to a light need.
 
-Here is the file, exactly as Matt publishes it (`skills/productivity/grilling/SKILL.md`, commit `95249b0`, 7 October 2026). It is written for Claude to follow, so it sounds like instructions to a colleague. I have not changed a word, and you should paste it exactly as it is.
+Here is the file, exactly as Matt publishes it (`skills/productivity/grilling/SKILL.md`, commit `95249b0`, 7 October 2026). It is written for Claude to follow, so it sounds like instructions to a colleague. I have not changed a word, so paste it as it is.
 
 ````text
 ---
@@ -128,7 +128,7 @@ SOFTWARE.
 
 Two things in the skill, in plain words. It says to send a helper (a sub-agent) to look facts up. In a chat, if Claude says it cannot, tell it to look things up itself, with [web search](/guides/claude/1-set-up-your-account/#web-search) on. And if an older write-up has Claude asking one question at a time, that was the skill's wording until the end of July.
 
-If rounds are too much for you, Matt supports going back to one question at a time with a single line. This one also goes in as it is:
+If rounds are too much for you, Matt supports going back to one question at a time with a single line, which also goes in as it is:
 
 ```text
 When grilling, ask one question at a time.
@@ -162,9 +162,9 @@ Not sure how to describe it? Ask Claude: "I have pasted a grilling skill. Help m
 
 ## Any big decision can run as a grilling project
 
-For a big, multi-part decision (estate planning, a renovation, choosing a school, a career change), a project built on grilling is the setup I trust most. My finance project is the original, about three times the length of what follows; this template keeps the parts that generalize. It is built on Matt Pocock's grilling skill (the grilling bullets in block one are my wording of his method, not his text), and comes as two blocks, for the reason given earlier: the first is project instructions, true in every chat; the second is a first-chat prompt, used once, to start round one.
+For a big, multi-part decision (estate planning, a renovation, choosing a school, a career change), a project built on grilling is the setup I trust most. My finance project is the original, about three times the length of what follows; this template keeps the parts that generalize. It is built on Matt Pocock's grilling skill (the grilling bullets in block one are my wording of his method, not his text). It comes as two blocks, as explained earlier: project instructions, true in every chat, and a first-chat prompt, used once, to start round one.
 
-Block one calls the living file the "state file", and its six numbered rules under "State file" are the six state-file rules. The living-file section further down explains each in plain words.
+Block one calls the living file the "state file"; its six numbered rules are the six state-file rules, explained in plain words in the living-file section below.
 
 Block one, the project instructions:
 
@@ -203,7 +203,7 @@ Both blocks are templates to tailor, not to paste as they are. Not sure what goe
 
 The sentence that matters most in this series is that AI is really good at writing prompts, instructions and configurations for AI. The builder prompt is that sentence turned into a tool: paste it into an ordinary new chat, outside any project, and Claude asks what the project is for, interviews you, works out which of the three shapes you have, and hands back three things.
 
-They go to three different places, which is where the distinction from earlier becomes concrete. The **project instructions** go in the project's instructions field. **Version one of the living file** goes in the project's files and gets replaced when the state changes; it is written in markdown, which is plain text with a few conventions (a line starting with `#` is a heading, a line starting with a dash is a bullet), so any text editor opens it. The **first-chat prompt** is the first message of a new chat inside the project.
+They go to three different places, which is where the distinction from earlier becomes concrete. The **project instructions** go in the project's instructions field. **Version one of the living file** goes in the project's files and gets replaced when the state changes. It is written in markdown, plain text with a few conventions (a line starting with `#` is a heading, a line starting with a dash is a bullet), so any text editor opens it. The **first-chat prompt** is the first message of a new chat inside the project.
 
 ```text
 I want to set up a Claude project, and I want you to build it with me. Start by asking what the project is for. Offer these as examples, and take anything else I say: health or training; a job search; a trip; an event I am organizing; the paperwork for a new job; teaching or sermon preparation; a home project.
@@ -234,7 +234,7 @@ To create the project, hover over the left side of your account and click Projec
 
 ### Health
 
-**What it holds.** The plan a doctor or coach has given you, your goals, your logs and the baseline you work from. Claude's job is to help you understand what they tell you, keep the records in order and prepare questions for the next appointment, not to stand in for them. That keeps the project on the safe side of the subject, and it covers most of what you need between appointments anyway.
+**What it holds.** The plan a doctor or coach has given you, your goals, your logs and the baseline you work from. Claude's job is to help you understand what they tell you, keep the records in order and prepare questions for the next appointment, not to stand in for them. That keeps the project on the safe side of the subject, and it covers most of what you need between appointments.
 
 **Memory will not carry it.** Anthropic's memory leaves out health and other sensitive topics unless you turn on "Include sensitive topics in memory" (Settings > Memory, covered in [Episode 1](/guides/claude/1-set-up-your-account/)), so for a health project the file does the remembering. A project also has its own memory, which, with memory on, can show up in chats outside the project. Turning off "Use account memory" on the project's page keeps it "fully separate", Anthropic says, without spelling out everything that covers, so treat it as the right switch, not a guarantee.
 
@@ -312,7 +312,7 @@ If your projects are the new version from the start of this episode, Claude keep
 
 **Will I come back to this, reuse the material, or keep getting tasks from it?** If yes, make a project. If no, a chat.
 
-**Do I want an answer or a finished thing?** An answer, an explanation, a draft you will rework yourself: a chat or a project chat does it. A finished thing, like a reconciled itinerary, a drafted document or an organized folder: ask for the finished thing, with the tools to make it. That is [Hand Claude the whole job](/guides/claude/3-hand-off-the-job/), Episode 3.
+**Do I want an answer or a finished thing?** An answer, an explanation, a draft you will rework yourself: a chat or a project chat does it. A finished thing, like a reconciled itinerary, a drafted document or an organized folder: ask for it, with the tools to make it. That is [Hand Claude the whole job](/guides/claude/3-hand-off-the-job/), Episode 3.
 
 The sign you have outgrown a project: the data and files are the work. My finances were a project first, built on grilling, with a living file. They are now a folder on my computer that I work in with Claude Code (Anthropic's coding tool), because dropping PDFs into a folder is easier than uploading them one at a time. The project was the architect's room; the folder is the job site. Episode 5 will cover it; it is not published yet.
 
