@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import { render } from 'astro:content';
+import { getSeries, freshness, SERIES_FEED_PATH } from '../../../lib/guides';
+import type { Episode, PublishedEpisode, PublishedGuideEntry } from '../../../lib/guides';
+
+export async function getStaticPaths() {
+  const { hub, episodes } = await getSeries();
+
+  return episodes.flatMap((episode, index) => {
+    if (!episode.published || episode.number < 1) return [];
+    // Skip drafts going back: a draft has no built page to link to. The hub
+    // (Episode 0) is always published, so a published predecessor exists.
+    const previous = episodes
+      .slice(0, index)
+      .reverse()
+      .find((candidate): candidate is PublishedEpisode => candidate.published)!;
+    const next = episodes[index + 1];
+    return [{ params: { episode: episode.slug }, props: { episode, hub, previous, next } }];
+  });
+}
+
+interface Props {
+  episode: PublishedEpisode;
+  hub: PublishedGuideEntry;
+  previous: PublishedEpisode;
+  next?: Episode;
+}
+
+const { episode, hub, previous, next } = Astro.props;
+const { entry, number } = episode;
+const { Content } = await render(entry);
+
+const longDateFmt: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+---
+
+<BaseLayout
+  title={`${entry.data.title} — ${hub.data.title}`}
+  description={entry.data.description}
+  ogType="article"
+  publishedDate={entry.data.pubDate}
+>
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title={hub.data.title}
+    href={SERIES_FEED_PATH}
+  />
+  <article>
+    <header>
+      <p class="series">
+        <a href="/guides/claude/">{hub.data.title}</a> &middot; Episode {number}
+      </p>
+      <h1>{entry.data.title}</h1>
+      <time datetime={freshness(entry).toISOString()}>
+        updated {freshness(entry).toLocaleDateString('en-US', longDateFmt)}
+      </time>
+      <AuthorshipBadge authorship={entry.data.authorship} expandable={true} explainer="guide" />
+    </header>
+    <Content />
+  </article>
+
+  <nav class="episode-nav" aria-label="episodes">
+    <span>
+      &larr;{' '}
+      <a href={previous.path}>
+        {previous.number === 0 ? 'Start here' : previous.entry.data.title}
+      </a>
+    </span>
+    {next && (
+      next.published ? (
+        <span><a href={next.path}>{next.entry.data.title}</a>{' '}&rarr;</span>
+      ) : (
+        <span class="coming-soon">next: {next.entry.data.title} (coming soon) &rarr;</span>
+      )
+    )}
+  </nav>
+</BaseLayout>
