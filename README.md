@@ -188,7 +188,8 @@ See `CLAUDE.md` for the full list of project constraints. Short version:
 - Node 24.x pinned via `engines` + `.nvmrc` + `engine-strict=true`.
 - pnpm version pinned via `packageManager` field (Corepack locally,
   `pnpm/action-setup` in CI).
-- Renovate opens grouped dependency PRs. **No auto-merge.** Review lockfile
-  diffs before merging.
+- Renovate opens grouped dependency PRs and automerges non-major updates
+  after the required CI checks pass. Majors wait for a human review
+  ([dotfiles ADR 0020](https://github.com/pkeppeler/dotfiles/blob/main/docs/adr/0020-renovate-automerges-non-major-through-a-reviews-bypass.md)).
 - Minimum dependencies. Prefer official `@astrojs/*` integrations over
   third-party.

@@ -128,14 +128,18 @@ Keep posts portable across markdown-based static site generators:
 - **Renovate opens grouped PRs** (see `renovate.json`; policy lives in the
   shared `pkeppeler/renovate` preset). Minor and patch updates arrive in one
   PR, and lockfile maintenance runs weekly.
-- **No auto-merge. Ever.** Every dependency update is reviewed by a human,
-  including patch bumps. The point of having Renovate is to surface
-  updates, not to automate merging.
+- **Renovate automerges non-major updates.** Minor, patch, pin and digest
+  updates, lockfile maintenance, and non-major security fixes merge once
+  the required CI checks pass. Renovate merges through its bypass on the
+  `reviews` ruleset; `ci-and-history` still binds it. This is deliberate:
+  read [dotfiles ADR 0020](https://github.com/pkeppeler/dotfiles/blob/main/docs/adr/0020-renovate-automerges-non-major-through-a-reviews-bypass.md)
+  before changing it.
+- **Majors wait for a human review**, security majors included. Each
+  major bump gets its own PR.
 - When reviewing a Renovate PR: read the changelogs of bumped packages,
   skim the lockfile diff for anything unexpected (new transitive deps,
   packages from unfamiliar authors), and run `pnpm build` locally before
   merging.
-- Major version bumps get their own PR and careful review.
 
 ### Deliberate dependencies
 
