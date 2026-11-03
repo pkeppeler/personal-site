@@ -21,13 +21,13 @@
   "engines": {
     "node": ">=24.0.0 <25.0.0"
   },
-  "packageManager": "pnpm@12.15.0",
+  "packageManager": "pnpm@12.16.0",
   "devDependencies": {
     "@vite-pwa/astro": "1.2.0",
     "sharp": "0.35.5",
     "vite-plugin-pwa": "2.0.0",
     "workbox-build": "7.4.1",
     "workbox-window": "7.4.1",
-    "wrangler": "4.152.0"
+    "wrangler": "4.153.0"
   }
 }
