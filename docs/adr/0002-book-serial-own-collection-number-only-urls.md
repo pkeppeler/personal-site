@@ -1,6 +1,6 @@
 # Book serial: its own collection and index, numbered filenames drive order, number-only URLs
 
-"The Writing Machine" is a serial novel kept in a `book` collection with its own index at `/writing-machine/`, separate from `posts` for the same reasons as guides: its audience and index differ, and it stays out of the blog feed. Installment files are named `<n>-<slug>.md`; the installment number is derived from the filename, so order has one source of truth. The URL carries only the number (`/writing-machine/1/`), so retitling an installment, or renaming its slug, keeps its link. Two entries with the same number fail the build, naming both files.
+"The Writing Machine" is a serial novel kept in a `book` collection with its own index at `/writing-machine/`, separate from `posts` for the same reasons as guides: its audience and index differ, and its installments appear in the main feed, as guide episodes do. Installment files are named `<n>-<slug>.md`; the installment number is derived from the filename, so order has one source of truth. The URL carries only the number (`/writing-machine/1/`), so retitling an installment, or renaming its slug, keeps its link. Two entries with the same number fail the build, naming both files.
 
 ## Considered options
 
