@@ -11,3 +11,5 @@
 ## Consequences
 
 Installment URLs get shared by email and text, so the `/writing-machine/<n>/` scheme is the part that cannot change cheaply once installment 1 is out. Titles and slugs stay free to change.
+
+The prologue is installment 0, at `/writing-machine/0/`, as Episode 0 is for guides, so installment N is chapter N.
