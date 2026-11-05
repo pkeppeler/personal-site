@@ -2,6 +2,7 @@
 title: "Chapter 1: The Man on the Riverbank"
 description: "Two children on their way to church find a man on the riverbank."
 pubDate: 2026-11-04
+updatedDate: 2026-11-05
 authorship: ai-drafted
 ---
 
@@ -141,7 +142,7 @@ He did it again, and again. Ma let him do it three times. Then she took his hand
 
 "Well," said Ma, and that was all she said.
 
-You and I would call it a zip, and never look at one twice. Nobody in Ballyclare had ever seen one. Nobody in Ireland had.
+You and I would call it a zip, and never look at one twice. In the whole of Ireland, the only ones were under one roof on Mill Row.
 
 Inside the pocket was a pocket-book of good black leather, folded in two. Ma opened it, and her mouth went small. There was paper money in it, green, with THE UNITED STATES OF AMERICA printed along the top. Ma didn't count it. She shut that side of the pocket-book at once, the way you'd shut a door on somebody dressing.
 
