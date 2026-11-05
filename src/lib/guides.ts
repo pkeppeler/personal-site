@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { parseNumberedName } from './numbered';
 
 export const SERIES_FEED_PATH = '/guides/claude/rss.xml';
 
@@ -10,7 +11,7 @@ export type PublishedGuideEntry = Omit<GuideEntry, 'data'> & {
   data: Extract<GuideEntry['data'], { draft: false }>;
 };
 
-const EPISODE_ID_PATTERN = /^claude\/(\d+)-([^/]+)$/;
+const EPISODE_ID_PREFIX = 'claude/';
 
 interface EpisodeBase {
   number: number;
@@ -35,14 +36,15 @@ export interface DraftEpisode extends EpisodeBase {
 export type Episode = PublishedEpisode | DraftEpisode;
 
 function toEpisode(entry: GuideEntry): Episode {
-  const match = entry.id.match(EPISODE_ID_PATTERN);
-  if (!match) {
+  const parsed = entry.id.startsWith(EPISODE_ID_PREFIX)
+    ? parseNumberedName(entry.id.slice(EPISODE_ID_PREFIX.length))
+    : undefined;
+  if (!parsed || parsed.slug.includes('/')) {
     throw new Error(
       `Guide entry id "${entry.id}" does not match the required claude/<n>-<slug>.md form`,
     );
   }
-  const number = Number(match[1]);
-  const slug = entry.id.slice('claude/'.length);
+  const { number, slug } = parsed;
   const path = number === 0 ? '/guides/claude/' : `/guides/claude/${slug}/`;
   return isPublished(entry)
     ? { number, slug, path, published: true, entry }

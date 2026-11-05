@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Article from '../../components/Article.astro';
+import { render } from 'astro:content';
+import { getInstallments, BOOK_TITLE } from '../../lib/book';
+import type { Installment } from '../../lib/book';
+
+export async function getStaticPaths() {
+  const installments = await getInstallments();
+  return installments.map((installment) => ({
+    params: { installment: String(installment.number) },
+    props: { installment },
+  }));
+}
+
+interface Props {
+  installment: Installment;
+}
+
+const { entry } = Astro.props.installment;
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  title={`${BOOK_TITLE}: ${entry.data.title}`}
+  description={entry.data.description}
+  ogType="article"
+  publishedDate={entry.data.pubDate}
+>
+  <Article
+    title={entry.data.title}
+    pubDate={entry.data.pubDate}
+    authorship={entry.data.authorship}
+  >
+    <Content />
+  </Article>
+</BaseLayout>

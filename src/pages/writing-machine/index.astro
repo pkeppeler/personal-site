@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AuthorshipBadge from '../../components/AuthorshipBadge.astro';
+import { getInstallments, BOOK_TITLE } from '../../lib/book';
+
+const blurb =
+  "A serial novel. In October 1881, two children in Ballyclare find a sleeping stranger, and a machine that writes. New installments as they're written.";
+
+const installments = await getInstallments();
+
+const dateFmt: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+---
+
+<BaseLayout
+  title={`${BOOK_TITLE} — Peter Keppeler`}
+  description={blurb}
+>
+  <h1>{BOOK_TITLE}</h1>
+  <p>{blurb}</p>
+  {installments.length === 0 ? (
+    <p>No installments yet.</p>
+  ) : (
+    <ul class="posts">
+      {installments.map(({ entry, path }) => (
+        <li>
+          <time datetime={entry.data.pubDate.toISOString()}>
+            {entry.data.pubDate.toLocaleDateString('en-US', dateFmt)}
+          </time>
+          <span class="post-entry">
+            <a href={path}>{entry.data.title}</a>
+            <AuthorshipBadge authorship={entry.data.authorship} />
+          </span>
+        </li>
+      ))}
+    </ul>
+  )}
+</BaseLayout>

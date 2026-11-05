@@ -1,0 +1,28 @@
+---
+import AuthorshipBadge from './AuthorshipBadge.astro';
+
+interface Props {
+  title: string;
+  pubDate: Date;
+  authorship: 'human' | 'ai-drafted';
+  expandable?: boolean;
+}
+
+const { title, pubDate, authorship, expandable = false } = Astro.props;
+
+const dateFmt: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+---
+
+<article>
+  <header>
+    <h1>{title}</h1>
+    <time datetime={pubDate.toISOString()}>
+      {pubDate.toLocaleDateString('en-US', dateFmt)}
+    </time>
+    <AuthorshipBadge authorship={authorship} expandable={expandable} />
+  </header><slot /></article>
