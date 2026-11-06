@@ -2,6 +2,7 @@
 title: "Chapter 3: The Homework Machine"
 description: "David finds a use for the writing machine, and the schoolmaster finds a Yankee spelling."
 pubDate: 2026-11-05
+updatedDate: 2026-11-05
 authorship: ai-drafted
 ---
 
@@ -25,11 +26,11 @@ Rebecca turned over and pulled the quilt up round her ears. "I'll not help you,"
 
 That was not the same as no, and they both knew it.
 
-You should know, before we go any further, that David was not stupid. He could carve a whistle that played two notes. He had built a water-wheel out of a cotton reel and the lid of a tin, and it turned in the lade all day long while the mill men pretended not to see it. But put a sum on a slate in front of him, and the figures wandered off like sheep through a gap in a hedge, and he never got them all back.
+Before we go any further, it is only fair to say that David was not stupid. He could carve a whistle that played two notes. He had built a water-wheel out of a cotton reel and the lid of a tin, and it turned in the lade all day long while the mill men pretended not to see it. But put a sum on a slate in front of him, and the figures wandered off like sheep through a gap in a hedge, and he never got them all back.
 
-That Monday the Master set six long-division sums, to be done at home and brought in on the slate. He set the chief towns of Ulster to be learned, with how many people lived in each. And for Wednesday he set a composition on Autumn.
+That Monday the Master chalked six long-division sums on the board, to be done at home and brought in on the slate in the morning. Under them he chalked the geography, for the morning too: *How many people live in Belfast?* And for Wednesday he set a composition on Autumn.
 
-David carried the slate home through two showers, buttoned inside his jacket, so that the rain wouldn't wash the sums off before he'd had the pleasure of not doing them.
+David copied the lot onto his slate, just as it stood on the board, *Divide 7345 by 13* and the rest, with Belfast at the bottom. He carried the slate home through two showers, buttoned inside his jacket, so that the rain wouldn't wash the sums off before he'd had the pleasure of not doing them.
 
 Ma and Rebecca were at the flowering frame by the window, catching the last of the light, their needles going in and out of the muslin as quick as hens pecking.
 
@@ -45,27 +46,59 @@ Ma looked at him the way she looked at a pot that ought to have boiled over and 
 
 In the room, David knelt on the far side of the bed, between it and the wall, where nobody in the doorway could see him. He dragged the bag out, black cloth and all, ran its teeth open, and lifted out the writing machine.
 
-The lid came up. The glass lit. *Welcome, JP.*
+He set it on the floor, put one hand flat on the bottom of it, as Rebecca had held it on Sunday, and got the nails of the other into the dip and lifted. The lid came up, and the glass lit.
 
-This, David soon found, was the trouble with the writing machine. It wanted JP's finger every time, and JP's right hand was on the other side of the bed, the door side, which was the wrong side for everything. So round the foot of the bed he went, with the machine in his arms, and fished the hand out from under the quilt, and laid the first finger on the little circle.
+There was the lake again, and the snow on the mountains, and the big white figures. But under them it didn't say Saturday any more. It said *Sunday, October 25*.
+
+"It's Monday," David told it, in Rebecca's voice.
+
+All the same, he was impressed. Rebecca had told it on Sunday that it was Sunday, and it had come round to her in the end, a day late, as people mostly did.
+
+The man's hand on this side of the bed was his left. David drew it out from under the quilt and laid the first finger flat on the little circle, not pressing at all.
+
+The picture went up. Behind it was the lake gone misty, and the faceless head, and *JP*, and the knot, and under the knot was the writing he had hoped not to see again:
+
+> Your fingerprint couldn't be recognized. Try using a different finger.
+
+David looked at the hand. It was the man's own hand, so by rights it was still the man's go.
+
+But it was his left. David had never once seen a boy shoot a marble with his left hand and hit anything. That wasn't a miss, he decided. That was the wrong hand, and you couldn't hold it against the man. Rebecca would have said a miss was a miss. Rebecca was at the frame.
+
+He tucked the left hand back in, and round the foot of the bed he went, quick, with the machine in his arms, and fished out the right hand on the door side, and laid its first finger on the little circle.
 
 "Sorry," he told the man. "It's only me."
 
-The glass changed, and there was last night's page, waiting for him. There was his *hello*, and Rebecca's question, and the answer about Saturday, all exactly as they had left it, like a letter lying open on the table. It had kept what they said.
+The faceless head went away, and there was the page, with *Welcome, JP* across the top. So it was that finger and no other: the right hand, the pointing finger.
+
+This, as David was to find, was the trouble with the writing machine. It wanted that finger every time, and that finger lived on the door side of the bed, which was the wrong side for everything.
+
+At the foot of the page was last night's writing, waiting for him. There was his *hello hello*, and the *Hi there*, and the wee yellow hand still held up, all exactly as they had left it, like a letter lying open on the table. It had kept what they said.
 
 He carried it back round to the wall side and sat cross-legged, with his slate on his knee.
 
-There was no Rebecca to call out the rows, so he hunted each letter as she had, along the top row, then the middle, then the bottom, until it turned up. The A was in the middle row, which was no place for the first letter of anything.
+Something in there had written back to the man. Whatever it was, it might be able to read. So David held his slate up to the glass, with the sums towards it, as he held it up for the Master, and waited. Nothing read it. Whatever was in there, it didn't look out.
 
-The figures ran along the row above the letters, one to nine in their proper order, with the nought at the far end like a boy sent to the back of the class. With one finger, the long bar for the gaps, and his tongue between his teeth, he wrote:
+He would have to write it in, then. There was no Rebecca to call out the rows, so he hunted each letter as she had, along the top row, then the middle, then the bottom, until it turned up. The A was in the middle row, which was no place for the first letter of anything.
 
-*can you do suns divide 7345 by 13 and 9282 by 17 and 5418 by 21*
+The figures ran along the row above the letters, one to nine in their proper order, with the nought at the far end like a boy sent to the back of the class. With one finger, the long bar for the gaps, and his tongue between his teeth, he copied the first sum off his slate, as the Master had set it, though the keys would give him only a small d:
 
-His finger had slipped once, and *sums* had come out *suns*, and nothing he knew of would take it back. He let it stand like a blot, added the other three sums, and pressed Enter.
+*divide 7345 by 13*
 
-> Great question! Let's work through these step by step. 😊
+Nothing happened.
+
+It had been slow on Sunday night, too. David sat on his hands and gave it time. He gave it a great deal of time. The sum sat in the long box and did nothing whatever.
+
+Something they had done on Sunday had set it going, and it could only have been the lifting. Rebecca had lifted it, and it had gone. True, she had lifted it a second time, just the same, and nothing had come; but by then, as she said herself, it had played its piece. That was yesterday. Today it hadn't played a note.
+
+He would lift it exactly as she had, then. Her left hand had been underneath, and her right round the far end, with the thumb across the keys for a grip. David put his hands where hers had been, and lifted it clear of the boards, as carefully as Ma carried the man's milk.
+
+Under his thumb, as it came up, a key gave: the big one at the end of the middle row, with an arrow on it bent like a hook.
+
+The sum jumped up out of the long box onto the page, into a little box of its own, over to one side, like the man's. And under it, a word at a time, quick and smooth, the writing came.
+
+> Great question! Let's work through it step by step. 😊
 >
-> **1. 7345 ÷ 13**
+> **7345 ÷ 13**
 >
 > - **Step 1:** 13 goes into 73 five times, with 8 over.
 > - **Step 2:** Bring down the 4 to make 84. 13 goes into 84 six times, with 6 over.
@@ -75,11 +108,30 @@ His finger had slipped once, and *sums* had come out *suns*, and nothing he knew
 
 So it could do sums.
 
-On Sunday night, reading the "Great question" it had given JP, David had snorted. Now that it said it to him, he could see that it was a very good judge. There was a round yellow face beside it, too, smiling at him, which nobody at school had ever done over a sum. It hadn't even minded the suns.
+On Sunday night, reading the "Great question" it had given JP, David had snorted. Now that it said it to him, he could see that it was a very good judge. There was a round yellow face beside it, too, smiling at him, which nobody at school had ever done over a sum.
 
-The writing kept coming, sum after sum, until it ran off the bottom of the glass and went on somewhere he couldn't see.
+Then he looked at the big key properly, and found a word on it as well as the arrow, small, in the corner: *Enter*.
 
-David pressed the last line with his thumb, the way he had pressed *Stop* on the wee glass. Nothing happened that he could see. The wee glass did as it was told, but this one, it seemed, was only for looking at. He tipped the lid back to see further down, and the writing tipped back with it.
+On Sunday he had pressed *Stop*, and the wee glass had stopped. Here was a key that said *Enter*, and his sum had entered: in off the long box and up onto the page, with the working coming in after it. His spare bolt had fitted at last.
+
+It was a type-writer that ran on, David decided. You gave it the start of a thing and pressed Enter, and it wrote you the rest.
+
+There were five sums left on the slate. He copied them all into the long box, one after another, with gaps between, and pressed Enter.
+
+The writing came down the glass, a word at a time, and at the very foot of it stopped in the middle of a line:
+
+> Sure! Here are the rest, step by step:
+>
+> **9282 ÷ 17**
+>
+> - **Step 1:** 17 goes into 92 five times, with 7 over.
+> - **Step 2:** Bring down the 8 to make 78. 17 goes into
+
+Under it there was only the long box, empty again.
+
+Nobody stops in the middle of a sum, not even David, and there had been five of them. The rest must be going on below the foot of the glass, where he couldn't follow.
+
+He pressed the last line with his thumb, as he had pressed *Stop* on the wee glass. Nothing happened that he could see. The wee glass did as it was told, but this one, it seemed, was only for looking at. He tipped the lid back to see further down, and the writing tipped back with it.
 
 Below the letters was a smooth dark square, set into the desk of the writing-box. You and I would call it a trackpad. To David it was plainly a slate, let in for jotting, and a slate is for writing on. So he tried his slate pencil on it.
 
@@ -87,7 +139,7 @@ It squeaked, and wrote nothing but a grey smudge.
 
 "What's that squealing?" called Ma.
 
-"Only my pencil," said David, which was true.
+"Only my pencil, Ma," said David, and put it in his pocket before it could say anything else.
 
 A smudged slate wants wiping. He rubbed the smooth slate clean with two fingers, like a wrong sum.
 
@@ -95,15 +147,41 @@ The writing climbed.
 
 It rose like a blind going up a window, and the next sum came up behind it. A wee white arrow had appeared from nowhere, too, and sat in the middle of the page, as if it had come to see what the fuss was about.
 
-David held his breath and wiped again, properly this time, with the heel of his hand. Nothing happened at all. One finger moved only the arrow, which followed it about the glass like a pup at heel. But two fingers together moved the writing, up when he pushed and down when he drew them towards him. He did it a great many times, never further back than his own question, for no reason except that he could.
+David held his breath and wiped again, properly this time, with the heel of his hand. The writing never stirred. He tried one finger, and the wee arrow went wherever his finger went, like a pup at heel, but the writing stayed where it was.
 
-He copied the sums as you'd copy anything out of a book: every word. Where the machine had put a black dot at the start of a line, David put a dot. Where it had made the figures thick and black, he pressed twice as hard. And where it had put a little green box with a tick in it, David drew a little box and put a tick in it. If the machine thought a thing worth putting in, who was he to leave it out?
+Then he remembered how he had wiped it the first time, and put two fingers down together.
 
-He was so slow at the copying that the glass grew dim, like a lamp turned down, and then dark altogether. He pressed a letter. *Welcome, JP*, said the glass, brightly.
+The writing climbed again. He drew the two fingers towards him, and it came back down.
+
+"It's on a reel," he told the man, delighted. "Like the paper at the mill."
+
+At the mill the paper came off the big machine in one long sheet with no end to it, and wound itself onto a reel. David wound the writing up and down a great many times, never further back than his own *hello hello*, for no reason except that he could.
+
+All six sums were there, and every one had its working out, in steps, and its answer, and a little green box with a tick in it.
+
+He copied them as you'd copy anything out of a book: every word. Where the machine had put a black dot at the start of a line, David put a dot. Where it had made the figures thick and black, he pressed twice as hard. And where it had put a little green box with a tick in it, David drew a little box and put a tick in it. If the machine thought a thing worth putting in, who was he to leave it out?
+
+He kept his fingers well off the slate while he copied, in case the reel wound away from him. He was so slow about it that the glass began to go dim and grey, like the window, where the day was going too.
+
+David put his hands round the glass, as Rebecca cupped the candle going up the ladder to bed, to keep the draught off it.
+
+"Don't," he told it.
+
+It went dark anyway.
+
+David knelt very still, with his hands round nothing. He had worn it out. Six sums, every one of them in steps, and all that winding up and down; and only that morning he had lain in the loft and said that writing didn't wear it out. He took his hands away and held them in his lap, clear of the letters, in case there was a drop of writing left in it and he used that up too.
+
+There was only one thing that had ever brought it back. On Sunday, when the little circle had put it out, Rebecca had shut the lid, and when he lifted it again, it had lit. So David shut the lid, gently, as she had, as if there were somebody asleep in it, and counted ten, and lifted.
+
+The glass lit. There was the lake, as bright as ever.
+
+Not worn out at all, then. It had only been banked, like a boiler fire for the night, and lifting the lid had stirred it up again. David breathed out, and decided he had known that all along.
+
+But it wanted the finger, of course. Off he went round the bed, and laid it on, and the lake slid away, and there was the page.
 
 It always welcomed JP. It never once welcomed David.
 
-Round the bed he went again, and again after that. The third time, he left the man's hand lying out on top of the quilt, handy.
+Twice more it darkened on him before the copying was done, and each time he shut the lid and lifted it, and round the bed he went. The third time, he left the man's hand lying out on top of the quilt, handy.
 
 That was when Ma's step came across the kitchen. David shut the lid, slid the machine under the bed, and was bent over his slate by the time she came in with the cup and spoon.
 
@@ -117,15 +195,17 @@ She sat on the edge of the bed and gave the man his milk, a wee drop at a time, 
 
 Ma went still. She looked at the man's face for a long moment, as if she were listening for something. Then she tucked the hand away, slowly, and was back at her frame without a word, and David wished he had said anything else at all.
 
-When he lifted the lid again, it said *Welcome, JP*.
+When she had gone, he lifted the lid again: the lake, and the man's finger, and the welcome. Before he put it away, he copied out the geography as the Master had chalked it on the board.
 
-Before he put it away, he asked about Belfast, for the towns of Ulster.
+There was a question mark on one of the keys, near the end of the bottom row, perched over a stroke. But when he pressed it, it was the stroke that came. He let it stand.
 
-*how many people live in belfast*
+*how many people live in belfast/*
 
 > About **345,000** people live in Belfast itself, and many more in the surrounding area.
 
-He asked about Ballyclare too, to see if it knew them.
+To see what it would write, he copied the very same line again, stroke and all, with Ballyclare put in for Belfast.
+
+*how many people live in ballyclare/*
 
 > Ballyclare is a friendly market town in County Antrim, with about **10,000** people. It's famous for its May Fair! 🐴
 
@@ -143,7 +223,7 @@ For one shining moment, the whole room looked at David. Then the Master held the
 
 "I can see they're ticks. Who taught you to set out a sum like a receipt for scones?" He laid the slate down. "And the ticks, Boyd, are mine."
 
-He looked at David over his spectacles for a long time, the way Da looked at a gauge that had no business reading what it read. David decided it was time to be clever again. So when the Master asked who could tell him how many people lived in Belfast, David's hand was up first.
+He looked at David over his spectacles for a long time, the way Da looked at a gauge that had no business reading what it read. David decided it was time to be clever again. So when the Master read the geography off the board, "How many people live in Belfast?", David's hand was up first.
 
 "Three hundred and forty-five thousand, sir."
 
@@ -185,11 +265,13 @@ David, who had been watching her and not the man at all, said nothing.
 
 At long last she rolled up her knitting, gave him a piece of treacle bread out of her apron pocket, and went home. She asked him nothing, which was her way.
 
-The moment the door shut behind her, David had the bag out, the lid up and the hand out from under the quilt.
+The moment the door shut behind her, David had the bag out and the lid up. *Monday, October 26*, said the lake now, a day behind and keeping to it. He had the man's hand out from under the quilt before the lake could go dark on him.
 
-*write i must not talk in class a hundred times*
+Then, to see whether it would do lines as it did sums, he copied them out as the Master had set them:
 
-It did it in a blink.
+*a hundred lines i must not talk in class*
+
+He pressed Enter, and it would. The lines came pouring down the glass, a word at a time, but far quicker than any hand, and ran off the foot of it.
 
 > Sure! Here are your 100 lines:
 >
@@ -197,7 +279,7 @@ It did it in a blink.
 > 2. I must not talk in class.
 > 3. I must not talk in class.
 
-The lines ran down the glass and off the bottom. When he pushed them up with two fingers, there were more, and more after those, a hundred of them, every one perfect. At the very end it said:
+When he wound them up with two fingers, there were more, and more after those, a hundred of them, every one perfect. At the very end it said:
 
 > 100. I must not talk in class.
 >
@@ -205,15 +287,15 @@ The lines ran down the glass and off the bottom. When he pushed them up with two
 
 There was the yellow face again, smiling, which was the worst part. Even the box was on the Master's side.
 
-"Well?" said Rebecca, from the door. It was her turn with the milk. She came round the bed and looked over his shoulder at the hundred lines shining on the glass.
+"Well?" said Rebecca, from the door. It was her turn with the milk. She came round the bed and looked over his shoulder at the end of the hundred lines, shining on the glass.
 
 "It's done them," said David. "Look. A hundred."
 
 "So it has," said Rebecca. "And how will it get them onto paper?"
 
-David opened his mouth, and shut it again.
+David couldn't say, and the machine, by the look of it, couldn't either.
 
-And they were all the same. What they wanted was a pen, and patience, and he had always been short of the second.
+There was nothing else for it. Lines on paper want a pen, and patience, and David had always been short of the second.
 
 Rebecca gave the man his milk, a drop at a time, while David told her about Belfast, and Ballyclare, and the whole room laughing. She thought about it with the spoon in the air.
 
@@ -223,9 +305,19 @@ That settled it. The writing machine exaggerated, like a Yank, and you would hav
 
 It wasn't exaggerating, as it happens. It was only early.
 
-There was still the composition. Before Rebecca could say a word, David had asked for that too.
+There was still the composition, and Rebecca was back at his shoulder, so she saw him copy that out too, as the Master had set it:
 
-*write a composition about autumn for school*
+*a composition on autumn*
+
+And she saw his finger go to the end of the middle row, to the big key with the hooked arrow.
+
+"What's that one for?"
+
+"That's the one you pressed on Sunday," said David, "with your thumb, when you lifted it. It says *Enter*. You put in the start of a thing, and press it, and it writes you the rest."
+
+"I never pressed anything."
+
+"You did so," said David, and pressed it, to show her.
 
 > **Autumn: A Season of Change** 🍂
 >
@@ -257,7 +349,7 @@ By the hundredth *I must not talk in class*, David never wanted to talk again, i
 
 On Wednesday the showers came one behind another all morning. The Master took in the lines and turned over every sheet, and found them all in David's own hand, which seemed to surprise him more than anything.
 
-After that came the compositions. He read David's twice. Then he began to read it out to the room, and stopped in the second sentence, with his finger on a word.
+After that came the compositions. He was a long time over David's, and said nothing while he read. Then he began to read it out to the room, and stopped in the second sentence, with his finger on a word.
 
 "Colour," said the Master, "has a u in it, Boyd. In this school, and in this kingdom. A Yankee spelling. Where did you get that?"
 

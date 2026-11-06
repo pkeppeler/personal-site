@@ -5,3 +5,5 @@ PNGs = "PNGs"
 [default.extend-words]
 # programming jargon, in PLAN.md
 enumerables = "enumerables"
+# a character sounds out "Un-re-spon-sive" in The Writing Machine, chapter 5
+sive = "sive"
