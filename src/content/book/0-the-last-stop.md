@@ -2,12 +2,13 @@
 title: "Prologue: The Last Stop"
 description: "JP takes the last bus to Ballyclare."
 pubDate: 2026-11-04
+updatedDate: 2026-11-05
 authorship: ai-drafted
 ---
 
 Somewhere over the Atlantic, at an hour that belonged to no clock in particular, a young American called JP was asking a machine whether it was rude to bring wine to dinner.
 
-It was the small hours of Friday the twenty-third of October, 2026, which is to say more or less now. The overnight flight from New York was dark. JP had tried to sleep, first against the window and then against nothing at all, and both had failed. So he had taken his laptop out of the pack at his feet and opened it, and the screen had lit up and said *Welcome, JP*, the way it always did. He laid his finger on the key in the corner, and it let him in, because it knew his finger and nobody else's.
+It was the small hours of Friday the twenty-third of October, 2026, which is to say more or less now. The overnight flight from New York was dark. JP had tried to sleep, first against the window and then against nothing at all, and both had failed. So he had taken his laptop out of the pack at his feet and opened it, and the screen had lit up. He laid his finger on the key in the corner, and because it knew his finger and nobody else's, it let him in and said *Welcome, JP*, the way it always did.
 
 The plane's Wi-Fi had given up, and it didn't matter. The thing he was talking to didn't live on the internet. It lived inside the laptop, all of it, and it would answer almost anything you typed. Putting machines like that into offices that weren't allowed the internet was JP's job. Tonight he wasn't working.
 

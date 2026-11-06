@@ -38,7 +38,7 @@ David walked properly for nearly a minute. Then he stopped so suddenly that Rebe
 
 There was.
 
-He lay under the old hawthorn where the bank went down to the water. He was on his side, with his knees drawn up a little, the way you lie when you mean to rest for a minute and sleep for an hour. The thorn was red with haws and hung all over with raindrops, and the grass round him was soaked. He was dry.
+He lay under the old hawthorn where the bank went down to the water. He was on his side, with his knees drawn up a little, like a man who had meant to rest for a minute and slept for an hour instead. The thorn was red with haws and hung all over with raindrops, and the grass round him was soaked. He was dry.
 
 Rebecca noticed that, and didn't know what to make of it, so she kept it, the way you keep a button you find in the road.
 
@@ -62,11 +62,11 @@ Then she was round the bend of the river and gone.
 
 Ma was already going down the bank. She bent over the man and said, "Sir," the way you speak to a gentleman. When that did nothing, she said, "Here, you, wake up," the way you speak to a tramp. That did nothing either. She shook his shoulder, and Da shook it harder, and the man's eyes stayed shut.
 
-Ma bent closer and sniffed at his breath, the way she sniffed the milk on a warm morning.
+Ma bent closer and sniffed at his breath, as she'd sniff the milk on a warm morning.
 
 "No drink," she said. "Not a drop."
 
-Da laid his big hand flat on the man's chest and waited. "He's breathing steady," he said. "Like a boiler fire banked for the night." Then he looked along the path after Mrs Strahan, and said, not crossly, but the way he'd say a valve was sticking, "We'll miss the meeting."
+Da laid his big hand flat on the man's chest and waited. "He's breathing steady," he said. "Like a boiler fire banked for the night." Then he looked along the path after Mrs Strahan, and said, not crossly, but as he'd say a valve was sticking, "We'll miss the meeting."
 
 "It's a work of mercy," said Ma.
 
@@ -78,17 +78,17 @@ Sam Orr from the mill came running along the path just then, late as usual, with
 
 Sam's face lit up. "Will I not, Mr Boyd?"
 
-So Da and Sam went back up to the row and lifted the Boyds' own back door off its hinges. Down at the river, Da slid the straps of the bag off the man's arms, gently, as you'd take the pack off a sleeping pedlar. Then they lifted the man onto the door. He didn't wake, not even when Sam dropped his end an inch.
+So Da and Sam went back up to the row and lifted the Boyds' own back door off its hinges. Down at the river, Da slid the straps of the bag off the man's arms, as gently as if he were easing the pack off a sleeping pedlar. Then they lifted the man onto the door. He didn't wake, not even when Sam dropped his end an inch.
 
 David picked up the bag and nearly sat down. "It's heavy!"
 
 "Then carry it between you," said Ma. "And don't you go hoking in it."
 
-That was how the Boyds came home from meeting before they had ever got there: Da and Sam with the door, and the man on it, and Ma alongside with a hand on his shoulder in case he rolled, and David and Rebecca behind with the bag swinging between them and the black cloth bumping hard at Rebecca's knees.
+That was how the Boyds came home from meeting before they had ever got there: Da and Sam with the door, and the man on it, and Ma alongside with a hand on his shoulder in case he rolled, and David and Rebecca behind with the bag swinging between them and the black cloth, stiff as a bonnet brim, bumping hard at Rebecca's knees.
 
 The Boyds' pew stood empty that morning, and it was talked about.
 
-It is not easy to get a man on a door through a door, but they managed it. Then Da and Sam stood in the kitchen with the door between them, and waited to be told where to put him.
+There is a knack to getting a man on a door through a door, and they found it at the third try. Then Da and Sam stood in the kitchen with the door between them, and waited to be told where to put him.
 
 Ma looked at the man. Rebecca could see her thinking, because Ma thought with her mouth, pressing it smaller and smaller.
 
@@ -108,7 +108,7 @@ She looked round at them all, in case anybody had an opinion. Nobody had.
 
 Ma put the children out in the yard while she and Da got him into the bed, which took a long while and a great deal of Da saying "Easy, now." Sam hung the door again and went off up the row to tell everybody.
 
-When Rebecca was let back in, the man lay under the good quilt with only his jacket and shoes off. The shoes stood side by side on the hearth like two loaves set to rise. When David pressed the sole of one with his thumb, it gave like dough, and then it pushed back.
+When Rebecca was let back in, the man lay under the good quilt with only his jacket and shoes off. The shoes stood side by side on the hearth like two loaves set to rise. David pressed the sole of one with his thumb, and it gave like dough, and then it pushed back.
 
 The jacket was on the kitchen table, and Ma sat in front of it the way she sat in front of a hard piece of sewing.
 
@@ -116,7 +116,7 @@ The jacket was on the kitchen table, and Ma sat in front of it the way she sat i
 
 She patted the jacket all over. There was something flat and hard in one of the pockets at the front. But when Ma went to put her hand in, there was no way in. The pocket had no button and no flap. It had no mouth at all.
 
-Down each side of the front of the jacket ran a strip of tiny teeth, like the edge of a comb. Rebecca had taken them for trimming. Now she saw that the same teeth ran across the pocket too, only here they were shut together, tight.
+Down each side of the front of the jacket ran a strip of tiny teeth, like the edge of a comb. Rebecca had taken them for trimming. Now she saw that the same teeth ran across the pocket too, only here two rows of them met, tight.
 
 "He's had his money sewn in," said Ma, "like a drover going to the fair."
 
@@ -130,7 +130,7 @@ There was: a little flat tab, of some stuff that wasn't metal and wasn't horn, h
 
 "I won't." He waggled it, and it rode on the teeth like a bead on a wire. He pushed it towards the end, and it wouldn't go, so he pulled it the other way.
 
-The teeth came apart. They came apart behind the tab, one after another, all along the pocket, the way a seam opens when you pull the thread, only faster and with a small purring noise. And there was the mouth of the pocket, open.
+The teeth came apart. They came apart behind the tab, one after another, all along the pocket, the way a seam opens when the thread is pulled, only faster and with a small purring noise. And there was the mouth of the pocket, open.
 
 Nobody said anything at all.
 
@@ -144,7 +144,7 @@ He did it again, and again. Ma let him do it three times. Then she took his hand
 
 You and I would call it a zip, and never look at one twice. In the whole of Ireland, the only ones were under one roof on Mill Row.
 
-Inside the pocket was a pocket-book of good black leather, folded in two. Ma opened it, and her mouth went small. There was paper money in it, green, with THE UNITED STATES OF AMERICA printed along the top. Ma didn't count it. She shut that side of the pocket-book at once, the way you'd shut a door on somebody dressing.
+Inside the pocket was a pocket-book of good black leather, folded in two. Ma opened it, and her mouth went small. There was paper money in it, green, with FEDERAL RESERVE NOTE printed along the top and THE UNITED STATES OF AMERICA under it. Ma didn't count it. She shut that side of the pocket-book at once, as you'd shut a door on somebody dressing.
 
 "He's a Yank!" said David.
 
@@ -164,13 +164,13 @@ The card round it was printed in fine blue and gold lines, as close as the threa
 
 "That'll be the engraver," said Ma, "and his shop. Your uncle's has the photographer's name on it, the same way."
 
-"It might be his," said Rebecca.
+"It might be his," said Rebecca. When she marked a sheet or a shirt, she stitched on the name of whoever owned it, never her own. And this card had come out of his pocket-book, with his money.
 
 "And who puts his own name round his own face?" said Ma. "The Queen does, on a penny. Nobody else."
 
 "And there's no writing to a picture-man in New York," said Da, from the room door. "He'll have taken half America."
 
-Then Rebecca found a date. Most of it she could make nothing of, but the end of it was plain enough.
+Then, in among the small print, Rebecca found 03/09/1997. Knock off the noughts, and 3/9 was three shillings and ninepence, as the draper wrote it on the tickets in his window. Cheap, she thought, for the patience of a saint. But four figures standing together, like the ones at the top of a letter, could only be a year.
 
 "Nineteen ninety-seven," she said.
 
@@ -180,7 +180,7 @@ David laughed out loud. Ma took the card back and held it at arm's length and lo
 
 "It's a long way out, for an error," said Rebecca.
 
-"Then it was a very bad printer," said Ma. She put the card back, and the pocket-book in the pocket, and ran the wee tab along, and the pocket bit itself shut. Then she hung the jacket on the back of the room door, and that was the end of looking for his name.
+"Then it was a very bad printer," said Ma. She slid the card back and left the others where they were. "And that's far enough into a man's pocket-book." She put the pocket-book in the pocket, and ran the wee tab along, and the pocket bit itself shut. Then she hung the jacket on the back of the room door, and that was the end of looking for his name.
 
 It was his driving licence, and 1997 was the year he was born. But there was nobody in Ballyclare to tell the Boyds so, and every reason in the world to blame the printer.
 
@@ -220,16 +220,16 @@ All that afternoon the man's bag sat on the floor beside the bed, with the black
 
 "It isn't ours," said Rebecca again. She knelt and pushed it under the bed, all the way to the wall, black cloth and all, where nobody could get at it. She didn't open it. She didn't even want to, much.
 
-Late in the afternoon Mrs McCready came in from next door with a bowl of broth under a cloth. She was old and small and bent like a hook, and she had taught Rebecca every stitch Rebecca knew. She set the broth on the hob. Then she went into the room and stood at the foot of the bed for a long time, looking at the man.
+Late in the afternoon Mrs McCready came in from next door with a bowl of broth under a cloth. She was old and small and bent like a hook, and she had taught Rebecca every stitch Rebecca knew. She set the broth on the hob. Then she stood at the foot of the bed for a long time, looking at the man.
 
 She didn't ask who he was, or where he had come from, or what Mrs Strahan was saying about him, which by then was a great deal.
 
 "Somebody's son," she said at last, and went home.
 
-Dusk came early, the way it does at the end of October. When the window began to go grey, Da went down to the mill to see to the boiler fires, as he did every Sabbath evening, because a boiler has to be minded whatever day it is. Ma made up the settle bed for herself and Da, and put her bonnet back on.
+Dusk came early, the way it does at the end of October. When the window began to go grey, Da walked down to the mill to see to the boiler fires, as he did every Sabbath evening, because a boiler has to be minded whatever day it is. Ma made up the settle bed for herself and Da, and put her bonnet back on.
 
 "I'm away up the row to Mrs Strahan's," she said, "to tell her he's not drunk." And she went, with the face she kept for burnt porridge.
 
-That left Rebecca by the bed with the cup and the spoon, because it was her turn, and David on the floor, looking at the place where the bag had gone. The window went from grey to a darker grey. The man swallowed when Rebecca gave him the milk, and slept, and swallowed, and slept.
+That left Rebecca by the bed with the cup and the spoon, because it was her turn, and David on the floor, looking at the place where the bag had gone. The window turned from grey to a darker grey. The man swallowed when Rebecca gave him the milk, and slept, and swallowed, and slept.
 
 Then, from under the bed, inside the man's bag, something began to sing.
