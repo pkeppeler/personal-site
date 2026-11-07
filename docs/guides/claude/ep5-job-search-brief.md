@@ -11,8 +11,12 @@ handoff. Delete it once the episode is published.
   `draft: true`). Next: PJ edits, then his brother fills the
   `TODO (brother)` blocks with his Cowork material. `TODO (verify)`
   blocks need a VERIFIED.md row before the fact can stay.
-- Workflow: PJ writes a first draft. His brother then clones this repo,
-  reworks the draft with what he has done in Cowork, and builds on it.
+- Workflow: PJ's first draft lives on the branch
+  `claude/focused-brahmagupta-g3fpsz` (PR #68, not merged). His brother
+  clones the repo, branches off that branch, reworks the draft with
+  what he has done in Cowork, and opens a PR into that branch, not into
+  `main`. PJ and his brother reconcile there; PR #68 merges once, after
+  both passes.
   The published episode combines the best of both. Neither person's
   use is the ceiling: if Claude can help a job search in a way neither
   of them tried, it belongs in the episode.
