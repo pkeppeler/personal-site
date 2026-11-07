@@ -28,6 +28,26 @@ handoff. Delete it once the episode is published.
    episode links to them; it does not repeat them.
 4. `docs/guides/claude/VERIFIED.md`. Every product fact needs a row.
 
+## Skills to use
+
+From this repo (`.claude/skills/`):
+
+- `guide-style`: prose rules for every edit to the episode.
+- `interviewing-the-author`: written for blog posts, but its method
+  (one question at a time, no prose until the material exists) is the
+  right way to pull the Cowork stories out of whoever ran them. Use it
+  before drafting a section neither of you has written yet.
+
+From the dotfiles repo (`pkeppeler/dotfiles`, installed with
+`./install.sh claude`, which links them into `~/.claude/skills/`):
+
+- `grilling`: stress-test a draft section, or reopen a settled decision
+  above. This episode was designed with it. Reopening a decision means
+  asking PJ first, per `CONTEXT.md`.
+- `domain-modeling`: load before editing `CONTEXT.md`.
+- `writing-pr-descriptions`: the PR title and description.
+- `pj-review`: for PJ reviewing his brother's pass, in his register.
+
 ## Settled decisions
 
 - **Number:** Episode 5. Finances moved to 6 and power skills to 7;
