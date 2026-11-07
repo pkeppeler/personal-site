@@ -2,7 +2,7 @@
 title: "Chapter 2: Welcome, JP"
 description: "Something in the stranger's bag starts to sing, and the children find a book of black metal that lights up."
 pubDate: 2026-11-05
-updatedDate: 2026-11-05
+updatedDate: 2026-11-07
 authorship: ai-drafted
 ---
 
@@ -70,7 +70,7 @@ Back went the wee glass into its pocket, still warm from singing. But the bag wa
 
 Two black cords came out first, each with a tiny flat end of metal, like the tag of a bootlace squashed thin.
 
-"Leads," said David. "For a very wee dog."
+"Strings," said David. "For a very wee dog."
 
 Next came a smooth white thing the size of a pullet's egg, with a seam round its middle.
 
@@ -86,7 +86,7 @@ There was a little dark blue book, too, with a gold eagle on the front and gold 
 
 "His people'll be in it," said David. "That's the very thing we're looking for."
 
-"And it's shut," said Rebecca. "You'd not open a letter to see who it was from." She put the little book back, and the leads after it.
+"And it's shut," said Rebecca. "You'd not open a letter to see who it was from." She put the little book back, and the cords after it.
 
 "I would," said David.
 
