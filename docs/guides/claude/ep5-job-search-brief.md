@@ -6,7 +6,8 @@ handoff. Delete it once the episode is published.
 
 ## Status (2026-11-07)
 
-- Designed in a grilling session with PJ. Not drafted.
+- Designed in two grilling rounds with PJ. Not drafted. PJ's project
+  summary is in; his brother's Cowork material is not yet.
 - Workflow: PJ writes a first draft. His brother then clones this repo,
   reworks the draft with what he has done in Cowork, and builds on it.
   The published episode combines the best of both. Neither person's
@@ -57,11 +58,19 @@ From the dotfiles repo (`pkeppeler/dotfiles`, installed with
   one of them actually did. PJ has not used Cowork, so Cowork claims
   come from his brother's real use; anything neither of them ran is
   framed as a suggestion, not a story.
-- **Provenance:** shape only. No employer names, no names of companies
-  ruled in or out, no compensation numbers.
+- **Provenance:** shape only, and coarse. No employer names, no names of
+  companies ruled in or out, no compensation numbers. Describe companies
+  by broad kind ("a later-stage security startup", "an early-stage
+  startup", "an AI startup"), never by a stage-plus-niche combination
+  that points at one company. Leave out that a founder was a friend
+  (unless PJ chooses to mention it generally), commute details, and
+  personal reads like "commitment anxiety". PJ's employer and the
+  companies he declined can read this.
 - **Audience:** generic. Senior readers and career changers, and also
-  early-career and mid-level readers whose search has stalled for a
-  while. Don't tilt it to executives.
+  early-career and mid-level readers. Don't tilt it to executives. A
+  stalled search ("months in, nothing is working") is covered as one
+  example of what this setup can work on, from PJ's and his brother's
+  material, not as the episode's bent.
 - **Thesis (held loosely):** the project holds your judgment; Cowork
   does the legwork; and Claude is also a thinking partner that finds
   options you had not considered (roles, angles, industries). Let the
@@ -82,7 +91,11 @@ From the dotfiles repo (`pkeppeler/dotfiles`, installed with
    might send, reply or forward; Auto is fine for searching, reading and
    drafting. No auto-applying. The Gmail connector can send (VERIFIED
    rows 129 and 130), so this rule is load-bearing.
-3. Settle the offer framework before the first offer arrives.
+3. Write your criteria down early. When offers arrive, ask Claude what
+   is actually deciding it and whether that is on the list; if not, add
+   it, and hold every offer to the updated list. (This is what really
+   happened: PJ's criteria filtered, and the deciding factors were ones
+   the list never named.)
 4. Connect a personal Google account, never a work one.
 
 ## Out of scope
@@ -90,21 +103,31 @@ From the dotfiles repo (`pkeppeler/dotfiles`, installed with
 Mass-apply or auto-apply tooling, third-party job-search plugins,
 LinkedIn automation, and salary figures or market data (they go stale
 and cannot be verified). Negotiation prep may still say "ask Claude to
-research ranges with sources, and check them yourself."
+research ranges with sources, and check them yourself." Offers stay at
+principles: add one factor per turn, get the real numbers (such as the
+share count) from the company, and learn the terms before the call.
+Claude can untangle and explain the mechanics of an offer for the
+reader's own case; the episode does not teach equity or tax mechanics
+itself, and points to Episode 6 for money.
 
 ## Candidate sections (a starting point, not a template)
 
 Title sections by the point they make, per guide-style. Cut, merge,
 reorder or add freely.
 
-1. Aim, and diagnose a stalled search: positioning, target roles, a
-   "won't take" list; for a stalled search, hand Claude the list of
-   applications and outcomes and ask for the pattern.
+1. Aim: positioning, target roles, a "won't take" list. One example of
+   what the setup handles: a stalled search, where you hand Claude the
+   list of applications and outcomes and ask for the pattern.
 2. The experience file by interview, going deeper than Episode 2 (the
    interview prompt itself).
 3. Find and vet roles: Research for deep dives, scored against your
    criteria, plus Claude suggesting directions you would not have
-   searched.
+   searched. Publish a general teardown prompt (what they do, who pays
+   and why, what the job would be day to day, risks, where it is
+   heading, questions for a first call), not PJ's verbatim one, which
+   is built for technical, venture-style evaluation; mention that he
+   added a defensibility lens for his background. Keep "what would the
+   job actually be day to day": it generalizes best.
 4. Tailor per role: a tailored copy of a master resume as a Google Doc,
    grounded only in the experience file; cover letter alongside.
 5. Keep the tracker current: Cowork reconciles Gmail and Calendar into
@@ -113,7 +136,14 @@ reorder or add freely.
 6. Preparation coach: company briefs, likely questions, mock interviews
    with pushback, practicing answers out loud, debriefs written back to
    the file.
-7. Offers, short: the framework from rule 3, then negotiation prep.
+7. Offers, short: rule 3, then negotiation prep (principles only, see
+   Out of scope).
+
+Override stories (where PJ pushed back on Claude, and the reverse) go in
+the sections where they happened, plus one short closing point: Claude
+is a strong second opinion, and you are the judge. Include one case each
+way so it does not read as self-congratulation (Claude was right that a
+round was seed, not pre-seed).
 
 ## Facts to verify at draft time
 
@@ -127,9 +157,22 @@ reorder or add freely.
 
 ## Material still needed
 
-**From PJ:** a summary of his claude.ai "Job Search" project. Run this
-in a new chat inside that project and paste the result into the
-drafting session (not into this repo):
+**From PJ: done.** His project summary is a private claude.ai doc,
+"Job Search Project: Writer's Brief":
+https://claude.ai/artifact/5SUMLLUEoZDr51gQqbeA3h (PJ shares access;
+without it the link opens nothing). Its specifics stay out of this repo:
+draft from it, applying the provenance rule above. Its stories map to
+the candidate sections: the "elite"-by-reputation claim and the
+deprioritized recruiter list (1); the project-inventory interview prompt
+(2); the teardown and the two decisions it changed (3); the four invented
+tools on a tailored resume (4, and the "never invent" rule); the pipeline
+file that stopped updating when decisions sped up (5); paste-the-raw-
+message and the decline-message edits (outreach); gap-finding, voice mock
+Q&A, the five-minute cheat sheet, the velocity debrief, and cutting 20
+pointed questions to a few curious ones (6); one factor per turn, the
+share-count denominator, and the two timing overrides (7).
+
+The prompt PJ used, for reuse:
 
 ```text
 I'm writing a guide episode about how I used this project for my job search. Go through everything you can see in this project (instructions, files, and what you remember from our chats) and write me a summary I can hand to another writer. Stick to shape, never specifics: no company names, no people's names, no compensation numbers, no employer names. Describe companies by kind (e.g. "an early-stage defense startup").
@@ -149,7 +192,8 @@ If you don't know something, say so; don't fill it in. Mark anything you're infe
 
 Treat only untagged items as story material.
 
-**From his brother:** the same summary from his own project, plus what
+**From his brother:** the same summary from his own project (run the
+prompt above there), plus what
 the Cowork jobs actually were: what he connected, the prompts he ran
 (verbatim), what came back and what was wrong, what he changed, where
 the tracker lived, what he did with Calendar, and whether he used

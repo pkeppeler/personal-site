@@ -254,7 +254,7 @@ Not sure what to write? Ask Claude: "Here are project instructions for a job sea
 
 **The first chat.** Build the experience file by interview: ask Claude to interview you about your three to five biggest wins, one at a time, and write each up (the situation, what you did, what made it hard, the result). Then add your resume and start the tracker with the companies you have in mind. For a deep look at one company, Research ([Episode 1](/guides/claude/1-set-up-your-account/)) is the tool.
 
-**Why a file earns its place here.** When offers arrive weeks apart, the framework you judged the first one by is in the file, so the second is held to the same standard, however you felt that week. Mine ended with an offer accepted.
+**Why a file earns its place here.** When the offers arrive, the criteria you wrote down before any of them are in the file, so each one is judged against the same list, however you feel that week. Mine ended with an offer accepted.
 
 ## A living file stays current because you replace it every time it changes
 
