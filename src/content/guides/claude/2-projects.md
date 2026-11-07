@@ -286,7 +286,7 @@ If you have Anthropic's new version of projects (in beta), Claude keeps a projec
 
 **Do I want an answer or a finished thing?** An answer, an explanation, a draft you will rework yourself: a chat or a project chat does it. A finished thing, like a reconciled itinerary, a drafted document or an organized folder: ask for it, with the tools to make it. That is [Hand Claude the whole job](/guides/claude/3-hand-off-the-job/), Episode 3.
 
-The sign you have outgrown a project: the data and files are the work. My finances were a project first, built on grilling, with a living file. They are now a folder on my computer that I work in with Claude Code (Anthropic's coding tool), because dropping PDFs into a folder is easier than uploading them one at a time. Episode 5 will cover it; it is not published yet.
+The sign you have outgrown a project: the data and files are the work. My finances were a project first, built on grilling, with a living file. They are now a folder on my computer that I work in with Claude Code (Anthropic's coding tool), because dropping PDFs into a folder is easier than uploading them one at a time. Episode 6 will cover it; it is not published yet.
 
 ## Checklist
 
