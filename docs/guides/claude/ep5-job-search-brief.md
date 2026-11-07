@@ -6,8 +6,11 @@ handoff. Delete it once the episode is published.
 
 ## Status (2026-11-07)
 
-- Designed in two grilling rounds with PJ. Not drafted. PJ's project
-  summary is in; his brother's Cowork material is not yet.
+- Designed in two grilling rounds with PJ. First pass drafted by Claude
+  from PJ's project summary (`src/content/guides/claude/5-job-search.md`,
+  `draft: true`). Next: PJ edits, then his brother fills the
+  `TODO (brother)` blocks with his Cowork material. `TODO (verify)`
+  blocks need a VERIFIED.md row before the fact can stay.
 - Workflow: PJ writes a first draft. His brother then clones this repo,
   reworks the draft with what he has done in Cowork, and builds on it.
   The published episode combines the best of both. Neither person's
