@@ -8,9 +8,10 @@ handoff. Delete it once the episode is published.
 
 - Designed in two grilling rounds with PJ. First pass drafted by Claude
   from PJ's project summary (`src/content/guides/claude/5-job-search.md`,
-  `draft: true`). Next: PJ edits, then his brother fills the
-  `TODO (brother)` blocks with his Cowork material. `TODO (verify)`
-  blocks need a VERIFIED.md row before the fact can stay.
+  `draft: true`). The brother's pass is done: he filled the
+  `TODO (brother)` blocks with his Cowork material. Next: PJ reconciles
+  it with his own pass. `TODO (verify)` blocks need a VERIFIED.md row
+  before the fact can stay.
 - Workflow: PJ's first draft lives on the branch
   `claude/focused-brahmagupta-g3fpsz` (PR #68, not merged). His brother
   clones the repo, branches off that branch, reworks the draft with

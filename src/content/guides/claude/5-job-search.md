@@ -7,22 +7,32 @@ authorship: ai-drafted
 
 <!--
 DRAFT NOTES (remove before publishing)
-- Status: first pass, drafted by Claude from PJ's project summary and the
-  plan in docs/guides/claude/ep5-job-search-brief.md. PJ edits next, then
-  his brother adds his Cowork material.
-- Every "TODO (brother)" block marks a place that needs his real use. Do
-  not fill one with something neither of you ran.
+- Status: first pass drafted by Claude from PJ's project summary and the
+  plan in docs/guides/claude/ep5-job-search-brief.md. The brother's pass
+  is now added: every brother placeholder is filled, the intro and
+  tracker section are rewritten to match what he ran, and there is a new
+  section on the weekly scheduled task. PJ reconciles next.
+- Do not fill a gap with something neither of you ran.
 - Every "TODO (verify)" marks a product fact with no VERIFIED.md row yet.
+- NOTE (brother) markers, for PJ to decide: the thesis paragraph and
+  description still say "calendar" and "tracker from your inbox"; the
+  tracker section heading is now a suggestion, not something either of
+  you ran.
+- NOTE (PJ) markers: hard rule 2 and the scheduled task (under "Claude
+  drafts, you send"); the checklist item that depends on it; Calendar
+  (tracker section).
 - Before publishing: set draft: false, add pubDate, decide authorship,
   add the one forward link in Episode 2's job-search section, and
   re-verify the rows this episode relies on (10, 14, 97, 117, 119, 121,
-  127 to 133, 137).
+  127 to 133, 137, 147 to 160).
 -->
 
-My last job search ran about two months, out of one Claude project, and ended with an offer accepted. <!-- TODO (brother): confirm this sentence describes what he did. -->
-My brother took the same setup further, handing whole jobs to Claude: keeping the tracker current from his inbox, drafting the follow-ups. This episode is what the two of us found helpful. It is not a ceiling. Claude is good at finding angles you would not have thought to try, and some of the most useful things in my search were ones I had not planned to ask for.
+My last job search ran about two months, out of one Claude project, and ended with an offer accepted.
+My brother is finishing a PhD and applying for academic and research jobs. He took a version of the same setup further, handing whole jobs to Claude: a weekly task that finds openings, Claude-drafted application documents, and one audit of his first application packet. His search is still under way. The current setup has run for about two weeks, he has sent no applications with it yet, and he has had no interviews or offers, so his half of this episode is about the setup, not about results. This episode is what the two of us found helpful. It is not a ceiling. Claude is good at finding angles you would not have thought to try, and some of the most useful things in my search were ones I had not planned to ask for.
 
 The setup splits the work in two. A project holds your judgment: who you are, what you will and will not take, and what is true about your experience. Cowork does the legwork: finding and vetting roles, tailoring documents, and keeping your tracker current from your email and calendar. You review what comes back and make every call.
+
+<!-- NOTE (brother): neither of us used Calendar, so "email and calendar" above, and the Gmail-and-Calendar framing in the frontmatter description, describe Peter's plan, not something we ran. The weekly task that finds openings and the one-time audit are the legwork my brother actually ran; the thesis could name them. Left as is for PJ to decide. -->
 
 Four rules run through everything below. I learned three of them the hard way:
 
@@ -42,8 +52,6 @@ If you are starting here, the short version:
 1. Make a project called "Job search" and paste in a few lines about you: your background in two sentences, what you are looking for, what is out, and your fixed constraints (location, pay floor, anything else). Ask Claude to help you write them. [Episode 2](/guides/claude/2-projects/) explains projects properly.
 2. Connect Gmail and Google Drive at Customize > Connectors, and turn them on for a chat from the "+" menu, under "Connectors". Turn on the Google Docs and Google Sheets connectors from the same "+" menu; they are separate from Drive, newer, and labeled beta. [Episode 3](/guides/claude/3-hand-off-the-job/) walks through connecting, and why to start in Manual permission mode.
 3. Know where Research is: the "+" menu, then "Research", with web search on. It is for paid plans, and it is the tool for a deep look at one company.
-
-<!-- TODO (brother): if he connected anything else (Google Calendar, Docs), add it to step 2 here, once the Calendar facts are verified. -->
 
 That is the whole setup. The rest of the episode is what to do with it.
 
@@ -79,7 +87,13 @@ Look for the pattern. Where do I drop out most often? What do the ones that went
 
 Not sure it fits your search? Ask Claude: "Here is a prompt for diagnosing a stalled job search: [paste it]. Help me adapt it. I have [what records you have]."
 
-<!-- TODO (PJ / brother): a real, shape-only example of this working, from either search, if there is one. If not, it stays a suggestion. -->
+A search can also stall before the first application, and then the job is triage, not pattern-finding. Less than a week into his project, my brother had sent no applications, and he typed one line:
+
+```text
+I have not applied to any jobs since the start of this project. It is [date]. What are my highest priority opportunities?
+```
+
+His project instructions already held the rest of the method, so a short question was enough. Claude re-checked the live postings, found that four of the deadlines he was tracking had already passed, and returned a day-by-day plan that named what to drop first if time ran short.
 
 ## Build your experience file by letting Claude interview you
 
@@ -100,6 +114,52 @@ Use only what I tell you. If something would make the write-up stronger but I ha
 Not sure how to start? Paste the prompt as it is. The first thing Claude does is tell you what to write.
 
 Save the result as a file in the project ([Episode 2](/guides/claude/2-projects/) covers files and keeping them current). When something new is worth adding, ask Claude for the complete updated file and replace the old one.
+
+## Have a weekly task bring you the openings
+
+Openings for academic and research jobs are scattered across alert emails, job boards and employer pages, and no single one is complete. My brother has a scheduled task that runs every Saturday morning without him. He had a similar weekly task in another AI assistant and recreated it in Claude. It reads the job-alert emails in his Gmail, searches the web, checks each posting on the employer's own page, and files a report in a Claude doc. Gmail is the only connector it needs.
+
+A Claude doc is a rich-text document saved to your Claude account, not a Google file. It is on every plan, you ask for one in any conversation, and your docs are listed in the Artifacts tab. <!-- Rows 157 and 158. --> The same doc keeps an "already reported" list, so a posting appears once, and again only if something about it changes. His project instructions hold a link to the doc and a Saturday-review instruction: open the newest report there and work from it. <!-- Row 160. -->
+
+Scheduled tasks are for paid plans, and they run in the cloud, so your computer can be off when one fires. To make one, describe the task and how often it should run in any conversation, phrased like Anthropic's own example: "Every Saturday at 8 AM, ..." Answer any questions Claude asks, review the name, schedule and instructions it proposes, and click "Schedule". Your tasks and their past runs are under "Scheduled" in the left sidebar. Do not count on an alert when a run finishes: open that page and read the report. <!-- Rows 147 to 151; 149 and 151 are PARTIAL, so the time zone and the notification are left unpromised. -->
+
+
+
+```text
+You are my weekly opportunity reporter. Each run, find currently open [kind of position] that fit my record, and report only the ones worth my attention.
+
+My profile: [degree status and expected finish date, work authorization, what I do or research, my strengths, my known gaps].
+
+Look for, in priority order: 1. [best-fit roles]. 2. [next best]. 3. [fellowships, grants or other].
+Hard exclusions (do not report; list under near-misses only if close): [for example part-time roles, the wrong seniority, a credential I lack, postings already closed].
+Eligibility flags (report the posting with a flag, do not discard it): [citizenship or visa rules, a degree that must be finished by a date, host-institution requirements, fixed-term roles].
+
+Sources: my Gmail job-alert emails (search the label [label name]), [job boards], and employer career pages.
+
+Gmail is READ-ONLY for this task. Never send, reply, forward, draft, label, archive or delete anything.
+
+Open each posting on the employer's own page before reporting it. If you cannot, mark it UNVERIFIED. Never invent a deadline, salary or requirement; write "not stated". Never copy a tracking link from an alert email, because it carries personal tokens; give the employer's URL instead.
+
+Rate each item as direct fit, adjacent fit or exploratory, with the gaps named. No numeric scores.
+Check every item against the "already reported" list in [the doc]. Report it again only if its status, deadline or requirements changed.
+
+Report format: title, employer and location; type; fit; eligibility; deadline and start date as stated; URL; date verified; your recommendation. Then near-misses, a deadline watch (reported items closing within 21 days), and changes.
+Be selective, but never leave a run silent: if nothing qualifies, say so and list the sources you checked.
+Start the report with one line saying where it is filed. File it in [the doc], and update the "already reported" list last.
+```
+
+Not sure what to write? Ask Claude: "I want a weekly task that finds [kind of jobs] for me and reports them in a doc. Interview me about my profile and what to include and exclude, one question at a time, then write the prompt."
+
+His own prompt runs to several pages. Most of it came over from the earlier version, and one change followed a failed run. That is normal: start with the short version and add a rule when a run gets something wrong. When he added job-platform emails, Claude first sampled his inbox to see what actually arrived. Have Claude look at your real email before it designs the search, not after.
+
+What went wrong, and what changed:
+
+- **The reports never reached the project.** They stayed in the task's own session, and the project knew nothing about them. The fix was a shared doc that both read, with an archive of recent reports.
+- **The task could not save a copy into the project.** A scheduled task cannot save into your project. He asked it to, and the run reported that no project tool was available in that session. He dropped the copy step, and each report now starts with a line saying where it is filed. Keep the shared record in a Claude doc, which worked for him, and bring what matters into the project yourself. <!-- Rows 121, 156 and 160. -->
+- **Some items stay unverified.** Alert links are tracking redirects, and some employer sites block automated reading. Those items come back marked UNVERIFIED, and you check them yourself.
+- **The report is only worth the review that follows it.** He is meant to open the newest report every Saturday and decide what to apply for. That review has not yet happened as designed.
+
+A task that runs while you are away raises a safety question of its own. It is covered under [Claude drafts, you send](#claude-drafts-you-send).
 
 ## Vet every company with the same questions, and ask what the job really is
 
@@ -147,15 +207,31 @@ Not sure what to change? Ask Claude: "Here is a prompt for tailoring a resume: [
 
 Read every tailored version before it goes anywhere, and check each line against the "Ask me" list.
 
-<!-- TODO (brother): did he tailor through Google Docs, or another way? Replace the "if I did it again" framing with what he actually ran, if it worked. -->
+My brother ran this more carefully than I did, and he did not use Google Docs. The first version of his project did only one thing: tailor his CV. He used it on one industry job he had found himself and got a callback, past the first screen, but not the job. He was well qualified for that niche role anyway, so one try proves little. The setup he has now is built around the same worry as my invented tools, that a claim might not be true.
+
+**Every kind of claim has one source file.** His CV source holds each entry as one tagged line. One block in it is the single source for every number, so a figure is never retyped from memory. Named "never say" rules, each a concrete case (some read like corrections), sit in the project instructions. Anything unverified is tagged and kept out of documents, or flagged back to him.
+
+**Every posting gets the same steps.** Claude summarizes the role, the items in his record that match it, and the gaps. It proposes a structure and waits for him to approve it. It drafts the document as a Word file, with a note of the items used, the items left out, and any doubts. Then he asks for targeted revisions instead of a fresh draft. Claude drafts cover letters, tailored CVs, and research and teaching statements this way. He reads them, cuts the bad parts, and gives Claude feedback to refine them. He submits every application himself.
+
+**A second pass can audit the first.** In his first application chat, Claude set up a helper (a sub-agent) that checked every claim in the drafts against the files and the rules before he saw anything. He had not asked for it. It found twelve errors; his record does not itemize them. The audit ran once, on that first packet. His drafts also showed upward drift: credit, role and frequency creeping past what the source said. "Supervised by" became "led by", and "occasional" was dropped from a description of outside work. He raised the over-crediting concern himself. Drift like this reads well, so a read for style misses it. A fresh chat with the draft and the source files is a rough stand-in for the helper.
+
+```text
+Act as an auditor, not the author. Here is a draft [document] and the files it must come from: [the experience file or CV source, and the rules]. Check every factual claim against the files, one at a time. List each claim that is not in the files, that says more than the file says (a stronger verb, a bigger role, a dropped "occasional"), or that breaks a "never say" rule. Quote the draft and the source side by side. Do not fix anything; just report.
+```
+
+Not sure how to word it? Ask Claude: "Write me an audit prompt that checks a draft against my source files for claims that go beyond them. Ask me what the common errors are in my field."
+
+Two more habits fit here. When you paste in feedback from someone else, ask Claude to rule on each point: accept, accept with changes, or push back, with a reason for each. My brother did this with a second critique of a cover letter. The good structural edits went in and two overreaching ones did not. And when you get advice, such as the notes from a careers conversation, ask Claude to turn it into written rules in the project, so every later application inherits it. Lengths for each kind of document, and "fit alone is not a reason to skip a posting", became rules that way.
+
+<!-- NOTE (brother): this heading is now a suggestion neither of us ran. My brother's tracker arrangement is below, and the heading could change to match. -->
 
 ## Let Cowork keep your tracker current from your inbox
 
 My tracker was a file in the project: one entry per company, with its stage, what it does, why it fits or does not, and the case for and against. It did a lot of work. It also stopped being true at exactly the wrong time. The copy in the project stops a week before the end of my search, when decisions sped up and I stopped re-uploading it. The final offer terms and the decision to pass on one company exist only in chats.
 
-That is the job to hand to Cowork. The facts of a search land in your inbox: application confirmations, recruiter replies, interview invites, rejections. Claude can search Gmail, build the tracker as a Google Sheet, and update it when you ask, so the tracker comes from the record instead of from your memory of it.
+My brother hit the same failure. His project's copy of the list of reported openings went stale: it still names an earlier report as the latest, and he has not yet moved the newer openings into the project's tracker. His arrangement has two parts. The doc his [weekly task](#have-a-weekly-task-bring-you-the-openings) keeps holds what the task found: its reports, a run log, and the list of what it has already reported. The tracker file in his project holds his applications, his decisions and his dates.
 
-<!-- TODO (brother): this section should rest on what he actually ran. Replace or rework everything below with his real prompts, what came back, what was wrong, and what he changed. Keep the read-only line and the edit-only-when-asked rule unless his experience says otherwise. -->
+The job I would hand to Cowork next is the one neither of us has run, so treat it as a suggestion. The facts of a search land in your inbox: application confirmations, recruiter replies, interview invites, rejections. Claude can search Gmail, build the tracker as a Google Sheet, and update it when you ask, so the tracker comes from the record instead of from your memory of it.
 
 ```text
 Search my Gmail for everything connected to my job search since [date]: application confirmations, recruiter messages, interview invitations and scheduling, rejections and offers. Search by words like "application", "interview", "recruiter", "offer" and "unfortunately", and by the name of every company you find.
@@ -173,7 +249,7 @@ The "Changes" tab does the job of the corrections log in [Episode 3](/guides/cla
 
 One limit to know: Claude does not change files stored in a project. The tracker lives in your Drive and the experience file in the project, and the experience file still gets updated the way [Episode 2](/guides/claude/2-projects/) describes: Claude writes the complete new version, and you replace the old one.
 
-<!-- TODO (verify + brother): Google Calendar. Row 128 confirms only that the connector exists. Verify what it can read and create, and whether it asks before creating or changing an event, then add what the brother did with it (interview invites into the tracker, holds for prep time). -->
+<!-- NOTE (PJ): neither of us used Calendar; verify and add as a suggestion, or leave it out. -->
 
 ## Claude drafts, you send
 
@@ -195,7 +271,24 @@ Not sure what to write back? Ask Claude to draft a reply, then rewrite it in you
 
 If Claude is drafting in Gmail itself, keep the sending yours. The Gmail connector can send, reply and forward. By default it asks before each of those, but in Auto permission mode its safety check decides what goes ahead, so do not count on a prompt. Switch to Manual whenever Claude might send anything ([Episode 3](/guides/claude/3-hand-off-the-job/) has the details), and do not hand any tool the job of applying for you.
 
-<!-- TODO (brother): his outreach. Did he have Claude draft follow-ups in Gmail? Did anything nearly go out that he had not meant to send? That story belongs here if it happened. -->
+My brother drafts in the chat and sends himself. His reference-request emails were written in a chat, and he sent each one from his own email. Claude never sends anything for him and never submits an application. Nothing has nearly gone out.
+
+A [scheduled task](#have-a-weekly-task-bring-you-the-openings) is where this rule is hardest to keep, because nobody is there to approve anything. Scheduled tasks that Claude sets up for you default to Auto permission mode, and my brother's runs in Auto. The Gmail connector includes tools that can send, reply and forward, and in an unattended Auto run nothing documented guarantees it stops before one of them. The read-only line in his prompt is the only guard. Nothing has gone out: his run reports describe read-only searches, and Claude has never sent anything for him. But that line is an instruction, not a guarantee. <!-- Rows 97, 129, 137, 152 and 155; 152 and 155 are PARTIAL. -->
+
+For a hard stop, block the tools. Go to Customize > Connectors, select Gmail, and under "Tool permissions" set the tools that send, reply and forward, and any delete tool, to "Blocked". Leave the draft tools alone, so Claude can still draft in Gmail. "Blocked" holds in every permission mode. "Needs approval" does not stop an Auto run, because in Auto Claude decides. The setting belongs to the connector, so it applies in every chat, not just the task, which suits an episode where you do the sending. If Tool permissions are not there for your account, your plan may not offer it. <!-- Rows 130, 154 and 155; 154 is PARTIAL because no connector or tool field is documented in a scheduled task's own form. -->
+
+Anthropic's own advice for scheduled tasks is blunter:
+
+> Avoid sensitive data and consequential actions. Don't schedule tasks that access sensitive files, send messages on your behalf, make purchases, or take other actions that are difficult to undo.
+>
+> Review outputs after each run.
+
+<!-- Row 153. -->
+
+Reading your email is not nothing, so the advice leans against a task like his. It is still reasonable here for three reasons: the task reads only the job-alert label and the job-platform senders in Gmail, its send tools are blocked, and you read every report.
+
+<!-- NOTE (PJ): this touches hard rule 2 (Manual whenever Claude might send). The guide now teaches "Blocked" tool permissions on Gmail's send, reply, forward and delete tools as the hard stop for unattended tasks, and leaves drafts alone (rows 154 and 155), since a task that runs while you are away cannot wait for approval. Please confirm that wording against hard rule 2. -->
+
 
 ## Use Claude as a preparation coach
 
@@ -266,7 +359,7 @@ It went the other way too. I described one company's funding as an earlier stage
 
 The pattern is the one from the rest of this series. Bring Claude the situation, let it push, and push back when you know something it does not. It is the best second opinion I have had. The call is still yours.
 
-<!-- TODO (brother): one override of his own, either direction, if he has one. -->
+My brother has one in each direction. Claude talked him out of withdrawing from his top application. With a few days left he felt too late to write a full plan of what he would teach. Claude pointed out that the posting said review *begins* on that date, so it was not a deadline, and that a junior faculty candidate needs a credible direction, not a finished curriculum. He stayed in, and the outcome is still pending, so neither of us can say yet who was right. The other way: Claude flagged five details in his materials as possibly wrong, and he confirmed the originals from his own knowledge each time. Claude's caution cost him some time and was not needed.
 
 ## Checklist
 
@@ -277,5 +370,9 @@ The pattern is the one from the rest of this series. Bring Claude the situation,
 - [ ] Rankings come with what they rest on: checkable, or reputation
 - [ ] Every serious company gets the same vetting questions, including "what is the job day to day?"
 - [ ] Every tailored resume is checked line by line against the experience file
+- [ ] A separate audit pass checks a draft's claims against the source files before you read it
+- [ ] A weekly scheduled task finds openings, with read-only Gmail instructions and Gmail's send tools set to "Blocked", and you review its report every week
 - [ ] The tracker is a Google Sheet with a "Changes" tab, and Claude edits it only when you ask
 - [ ] Your criteria are written down before the first offer, and updated when the offers show what was missing
+
+<!-- NOTE (PJ): the scheduled-task checklist item depends on PJ's answer to the hard-rule-2 note under "Claude drafts, you send". -->
